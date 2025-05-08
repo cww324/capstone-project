@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
 dist
 dist-ssr
@@ -22,3 +23,41 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# JSON Server Database
+api/db.json
+
+# Build and cache directories
+.cache/
+.next/
+out/
+coverage/
+build/
+
+# MacOS system files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# VSCode workspace settings
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/*.code-snippets
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
