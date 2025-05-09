@@ -5,39 +5,95 @@
       "name": "Charlie",
       "email": "charlie@example.com",
       "password": "password123"
+    },
+    {
+      "id": 2,
+      "name": "Alex",
+      "email": "alex@example.com",
+      "password": "hunter2"
     }
   ],
   "trips": [
     {
       "id": 1,
-      "user_id": 1,
-      "title": "Mexico City 2026",
-      "description": "Group trip to see the World Cup final",
-      "start_date": "2026-06-01",
-      "end_date": "2026-06-10"
-    }
-  ],
-  "lodgings": [
+      "name": "Mexico City Madness",
+      "organizerId": 1,
+      "destination": "Mexico City",
+      "startDate": "2026-06-15",
+      "endDate": "2026-06-25",
+      "matchIds": [1, 2],
+      "lodgingIds": [1, 2]
+    },
     {
-      "id": 1,
-      "name": "Hotel Azteca",
-      "location": "Mexico City",
-      "address": "123 Main St",
-      "price_per_night": 120,
-      "description": "Luxury hotel near the stadium"
+      "id": 2,
+      "name": "Canadian Conquest",
+      "organizerId": 2,
+      "destination": "Toronto",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-28",
+      "matchIds": [3],
+      "lodgingIds": [3]
     }
   ],
   "matches": [
     {
       "id": 1,
-      "home_team": "Mexico",
-      "away_team": "USA",
-      "date": "2026-06-03",
-      "stadium": "Estadio Azteca",
-      "city": "Mexico City",
-      "country": "Mexico"
+      "team1": "Mexico",
+      "team2": "Argentina",
+      "date": "2026-06-20",
+      "location": "Estadio Azteca"
+    },
+    {
+      "id": 2,
+      "team1": "USA",
+      "team2": "Germany",
+      "date": "2026-06-22",
+      "location": "Estadio Azteca"
+    },
+    {
+      "id": 3,
+      "team1": "Canada",
+      "team2": "Brazil",
+      "date": "2026-06-25",
+      "location": "BMO Field"
     }
   ],
-  "trip_matches": [{ "id": 1, "trip_id": 1, "match_id": 1 }],
-  "trip_lodgings": [{ "id": 1, "trip_id": 1, "lodging_id": 1 }]
+  "lodgings": [
+    {
+      "id": 1,
+      "name": "Azteca Hostel",
+      "address": "123 Stadium St, Mexico City",
+      "pricePerNight": 40,
+      "availableFrom": "2026-06-15",
+      "availableTo": "2026-06-25"
+    },
+    {
+      "id": 2,
+      "name": "Stadium Suites",
+      "address": "456 Soccer Ave, Mexico City",
+      "pricePerNight": 120,
+      "availableFrom": "2026-06-15",
+      "availableTo": "2026-06-25"
+    },
+    {
+      "id": 3,
+      "name": "Toronto Towers",
+      "address": "789 Maple St, Toronto",
+      "pricePerNight": 100,
+      "availableFrom": "2026-06-18",
+      "availableTo": "2026-06-28"
+    }
+  ],
+  "participants": [
+    {
+      "id": 1,
+      "userId": 1,
+      "tripId": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "tripId": 2
+    }
+  ]
 }

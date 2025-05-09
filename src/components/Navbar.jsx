@@ -1,21 +1,38 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    localStorage.removeItem('user');
-    navigate('/');
-    window.location.reload();
-  };
-
+  const navigate = useNavigate;
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/trips">Trips</Link>
-      <Link to="/matches">Matches</Link>
-      <Link to="/lodgings">Lodgings</Link>
-      <button onClick={handleLogout}>Logout</button>
-    </nav>
+    <ul className="navbar">
+      <li className="navbar-item">
+        <Link to="/">Home</Link>
+      </li>
+      <li className="navbar-item">
+        <Link to="/lodgings">lodgings</Link>
+      </li>
+      <li className="navbar-item">
+        <Link to="/matches">Matches</Link>
+      </li>
+      <li className="navbar-item">
+        <Link to="/trips">Trips</Link>
+      </li>
+      {localStorage.getItem('honey_user') ? (
+        <li className="navbar-item navbar-logout">
+          <Link
+            className="navbar-link"
+            to=""
+            onClick={() => {
+              localStorage.removeItem('honey_user');
+              navigate('/', { replace: true });
+            }}
+          >
+            Logout
+          </Link>
+        </li>
+      ) : (
+        ''
+      )}
+    </ul>
   );
 };
