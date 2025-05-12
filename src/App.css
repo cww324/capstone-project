@@ -40,3 +40,27 @@
 .read-the-docs {
   color: #888;
 }
+/* src/App.css */
+.navbar {
+  display: flex;
+  gap: 20px;
+  background-color: #333;
+  padding: 10px 20px;
+  list-style-type: none;
+}
+
+.navbar-item {
+  color: white;
+}
+
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-logout button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

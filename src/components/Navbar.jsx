@@ -1,15 +1,21 @@
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+// src/components/Navbar.jsx
+import { useNavigate, Link } from 'react-router-dom';
 
 export const Navbar = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    navigate('/', { replace: true });
+  };
+
   return (
     <ul className="navbar">
       <li className="navbar-item">
         <Link to="/">Home</Link>
       </li>
       <li className="navbar-item">
-        <Link to="/lodgings">lodgings</Link>
+        <Link to="/lodgings">Lodgings</Link>
       </li>
       <li className="navbar-item">
         <Link to="/matches">Matches</Link>
@@ -17,21 +23,10 @@ export const Navbar = () => {
       <li className="navbar-item">
         <Link to="/trips">Trips</Link>
       </li>
-      {localStorage.getItem('honey_user') ? (
+      {localStorage.getItem('user') && (
         <li className="navbar-item navbar-logout">
-          <Link
-            className="navbar-link"
-            to=""
-            onClick={() => {
-              localStorage.removeItem('honey_user');
-              navigate('/', { replace: true });
-            }}
-          >
-            Logout
-          </Link>
+          <button onClick={handleLogout}>Logout</button>
         </li>
-      ) : (
-        ''
       )}
     </ul>
   );

@@ -38,50 +38,93 @@
   "matches": [
     {
       "id": 1,
-      "team1": "Mexico",
-      "team2": "Argentina",
-      "date": "2026-06-20",
-      "location": "Estadio Azteca"
+      "group": "A",
+      "date": "2026-06-11",
+      "stadium": "Estadio Azteca",
+      "location": "Mexico City, Mexico",
+      "description": "Match 1 - Group A (Mexico #1)"
     },
     {
       "id": 2,
-      "team1": "USA",
-      "team2": "Germany",
-      "date": "2026-06-22",
-      "location": "Estadio Azteca"
+      "group": "A",
+      "date": "2026-06-11",
+      "stadium": "Estadio Guadalajara",
+      "location": "Guadalajara, Mexico",
+      "description": "Match 2 - Group A"
     },
     {
       "id": 3,
-      "team1": "Canada",
-      "team2": "Brazil",
-      "date": "2026-06-25",
-      "location": "BMO Field"
+      "group": "B",
+      "date": "2026-06-12",
+      "stadium": "Toronto Stadium",
+      "location": "Toronto, Canada",
+      "description": "Match 3 - Group B (Canada #1)"
+    },
+    {
+      "id": 4,
+      "group": "D",
+      "date": "2026-06-12",
+      "stadium": "Los Angeles Stadium",
+      "location": "Los Angeles, USA",
+      "description": "Match 4 - Group D (USA #1)"
+    },
+    {
+      "id": 5,
+      "group": "C",
+      "date": "2026-06-13",
+      "stadium": "Boston Stadium",
+      "location": "Boston, USA",
+      "description": "Match 5 - Group C"
+    },
+    {
+      "id": 6,
+      "group": "D",
+      "date": "2026-06-13",
+      "stadium": "BC Place",
+      "location": "Vancouver, Canada",
+      "description": "Match 6 - Group D"
+    },
+    {
+      "id": 7,
+      "group": "C",
+      "date": "2026-06-13",
+      "stadium": "New York New Jersey Stadium",
+      "location": "New York, USA",
+      "description": "Match 7 - Group C"
+    },
+    {
+      "id": 8,
+      "group": "B",
+      "date": "2026-06-13",
+      "stadium": "San Francisco Bay Area Stadium",
+      "location": "San Francisco, USA",
+      "description": "Match 8 - Group B"
     }
   ],
   "lodgings": [
     {
       "id": 1,
-      "name": "Azteca Hostel",
-      "address": "123 Stadium St, Mexico City",
-      "pricePerNight": 40,
-      "availableFrom": "2026-06-15",
-      "availableTo": "2026-06-25"
+      "name": "Qatar Palace Hotel",
+      "location": "Atlanta, Georgia",
+      "price_per_night": 150,
+      "description": "Luxury stay with pool and stadium views.",
+      "image": "/images/soccerhouse1.hpg"
     },
     {
       "id": 2,
-      "name": "Stadium Suites",
-      "address": "456 Soccer Ave, Mexico City",
-      "pricePerNight": 120,
-      "availableFrom": "2026-06-15",
-      "availableTo": "2026-06-25"
+      "name": "Desert Oasis Inn",
+      "location": "Al Wakrah, Qatar",
+      "price_per_night": 80,
+      "description": "Affordable stay close to the beach.",
+      "image": "/images/desert-oasis.jpg"
     },
     {
       "id": 3,
-      "name": "Toronto Towers",
-      "address": "789 Maple St, Toronto",
-      "pricePerNight": 100,
-      "availableFrom": "2026-06-18",
-      "availableTo": "2026-06-28"
+      "name": "Downtown Doha Hostel",
+      "location": "Doha, Qatar",
+      "price_per_night": 40,
+      "description": "Budget-friendly hostel in the heart of the city.",
+      "image": "/images/downtown-hostel.jpg"
     }
   ],
   "participants": [
