@@ -32,3 +32,35 @@
   background-color: #f44336;
   color: #fff;
 }
+.match-box {
+  border-color: #ccc;
+}
+
+.match-date {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.match-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.match-location {
+  font-size: 1rem;
+  color: #555;
+}
+
+.team-matchup {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* custom gap */
+}
+
+.vs-text {
+  margin: 0 0.75rem;
+  font-weight: 500;
+}

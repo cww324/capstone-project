@@ -38,67 +38,633 @@
   "matches": [
     {
       "id": 1,
+      "matchNumber": 1,
       "group": "A",
+      "team1": "USA",
+      "team2": "Finland",
       "date": "2026-06-11",
       "stadium": "Estadio Azteca",
-      "location": "Mexico City, Mexico",
-      "description": "Match 1 - Group A (Mexico #1)"
+      "city": "Mexico City"
     },
     {
       "id": 2,
+      "matchNumber": 2,
       "group": "A",
-      "date": "2026-06-11",
+      "team1": "USA",
+      "team2": "Ivory Coast",
+      "date": "2026-06-12",
       "stadium": "Estadio Guadalajara",
-      "location": "Guadalajara, Mexico",
-      "description": "Match 2 - Group A"
+      "city": "Guadalajara"
     },
     {
       "id": 3,
-      "group": "B",
-      "date": "2026-06-12",
+      "matchNumber": 3,
+      "group": "A",
+      "team1": "USA",
+      "team2": "Japan",
+      "date": "2026-06-13",
       "stadium": "Toronto Stadium",
-      "location": "Toronto, Canada",
-      "description": "Match 3 - Group B (Canada #1)"
+      "city": "Toronto"
     },
     {
       "id": 4,
-      "group": "D",
-      "date": "2026-06-12",
+      "matchNumber": 4,
+      "group": "A",
+      "team1": "Finland",
+      "team2": "Ivory Coast",
+      "date": "2026-06-14",
       "stadium": "Los Angeles Stadium",
-      "location": "Los Angeles, USA",
-      "description": "Match 4 - Group D (USA #1)"
+      "city": "Los Angeles"
     },
     {
       "id": 5,
-      "group": "C",
-      "date": "2026-06-13",
+      "matchNumber": 5,
+      "group": "A",
+      "team1": "Finland",
+      "team2": "Japan",
+      "date": "2026-06-15",
       "stadium": "Boston Stadium",
-      "location": "Boston, USA",
-      "description": "Match 5 - Group C"
+      "city": "Boston"
     },
     {
       "id": 6,
-      "group": "D",
-      "date": "2026-06-13",
+      "matchNumber": 6,
+      "group": "A",
+      "team1": "Ivory Coast",
+      "team2": "Japan",
+      "date": "2026-06-16",
       "stadium": "BC Place",
-      "location": "Vancouver, Canada",
-      "description": "Match 6 - Group D"
+      "city": "Vancouver"
     },
     {
       "id": 7,
-      "group": "C",
-      "date": "2026-06-13",
+      "matchNumber": 7,
+      "group": "B",
+      "team1": "Mexico",
+      "team2": "Uruguay",
+      "date": "2026-06-17",
       "stadium": "New York New Jersey Stadium",
-      "location": "New York, USA",
-      "description": "Match 7 - Group C"
+      "city": "New York"
     },
     {
       "id": 8,
+      "matchNumber": 8,
       "group": "B",
-      "date": "2026-06-13",
-      "stadium": "San Francisco Bay Area Stadium",
-      "location": "San Francisco, USA",
-      "description": "Match 8 - Group B"
+      "team1": "Mexico",
+      "team2": "Netherlands",
+      "date": "2026-06-18",
+      "stadium": "SF Bay Area Stadium",
+      "city": "San Francisco"
+    },
+    {
+      "id": 9,
+      "matchNumber": 9,
+      "group": "B",
+      "team1": "Mexico",
+      "team2": "Austria",
+      "date": "2026-06-19",
+      "stadium": "Philadelphia Stadium",
+      "city": "Philadelphia"
+    },
+    {
+      "id": 10,
+      "matchNumber": 10,
+      "group": "B",
+      "team1": "Uruguay",
+      "team2": "Netherlands",
+      "date": "2026-06-20",
+      "stadium": "Houston Stadium",
+      "city": "Houston"
+    },
+    {
+      "id": 11,
+      "matchNumber": 11,
+      "group": "B",
+      "team1": "Uruguay",
+      "team2": "Austria",
+      "date": "2026-06-21",
+      "stadium": "Dallas Stadium",
+      "city": "Dallas"
+    },
+    {
+      "id": 12,
+      "matchNumber": 12,
+      "group": "B",
+      "team1": "Netherlands",
+      "team2": "Austria",
+      "date": "2026-06-22",
+      "stadium": "Estadio Monterrey",
+      "city": "Monterrey"
+    },
+    {
+      "id": 13,
+      "matchNumber": 13,
+      "group": "C",
+      "team1": "Canada",
+      "team2": "Denmark",
+      "date": "2026-06-23",
+      "stadium": "Miami Stadium",
+      "city": "Miami"
+    },
+    {
+      "id": 14,
+      "matchNumber": 14,
+      "group": "C",
+      "team1": "Canada",
+      "team2": "Greece",
+      "date": "2026-06-24",
+      "stadium": "Atlanta Stadium",
+      "city": "Atlanta"
+    },
+    {
+      "id": 15,
+      "matchNumber": 15,
+      "group": "C",
+      "team1": "Canada",
+      "team2": "South Korea",
+      "date": "2026-06-25",
+      "stadium": "Los Angeles Stadium",
+      "city": "Los Angeles"
+    },
+    {
+      "id": 16,
+      "matchNumber": 16,
+      "group": "C",
+      "team1": "Denmark",
+      "team2": "Greece",
+      "date": "2026-06-26",
+      "stadium": "Seattle Stadium",
+      "city": "Seattle"
+    },
+    {
+      "id": 17,
+      "matchNumber": 17,
+      "group": "C",
+      "team1": "Denmark",
+      "team2": "South Korea",
+      "date": "2026-06-27",
+      "stadium": "New York New Jersey Stadium",
+      "city": "New York"
+    },
+    {
+      "id": 18,
+      "matchNumber": 18,
+      "group": "C",
+      "team1": "Greece",
+      "team2": "South Korea",
+      "date": "2026-06-28",
+      "stadium": "Boston Stadium",
+      "city": "Boston"
+    },
+    {
+      "id": 19,
+      "matchNumber": 19,
+      "group": "D",
+      "team1": "Senegal",
+      "team2": "Australia",
+      "date": "2026-06-29",
+      "stadium": "Kansas City Stadium",
+      "city": "Kansas City"
+    },
+    {
+      "id": 20,
+      "matchNumber": 20,
+      "group": "D",
+      "team1": "Senegal",
+      "team2": "Switzerland",
+      "date": "2026-06-30",
+      "stadium": "SF Bay Area Stadium",
+      "city": "San Francisco"
+    },
+    {
+      "id": 21,
+      "matchNumber": 21,
+      "group": "D",
+      "team1": "Senegal",
+      "team2": "Germany",
+      "date": "2026-07-01",
+      "stadium": "Toronto Stadium",
+      "city": "Toronto"
+    },
+    {
+      "id": 22,
+      "matchNumber": 22,
+      "group": "D",
+      "team1": "Australia",
+      "team2": "Switzerland",
+      "date": "2026-07-02",
+      "stadium": "Dallas Stadium",
+      "city": "Dallas"
+    },
+    {
+      "id": 23,
+      "matchNumber": 23,
+      "group": "D",
+      "team1": "Australia",
+      "team2": "Germany",
+      "date": "2026-07-03",
+      "stadium": "Houston Stadium",
+      "city": "Houston"
+    },
+    {
+      "id": 24,
+      "matchNumber": 24,
+      "group": "D",
+      "team1": "Switzerland",
+      "team2": "Germany",
+      "date": "2026-07-04",
+      "stadium": "Estadio Azteca",
+      "city": "Mexico City"
+    },
+    {
+      "id": 25,
+      "matchNumber": 25,
+      "group": "E",
+      "team1": "Mali",
+      "team2": "Paraguay",
+      "date": "2026-07-05",
+      "stadium": "Atlanta Stadium",
+      "city": "Atlanta"
+    },
+    {
+      "id": 26,
+      "matchNumber": 26,
+      "group": "E",
+      "team1": "Mali",
+      "team2": "Italy",
+      "date": "2026-07-06",
+      "stadium": "Los Angeles Stadium",
+      "city": "Los Angeles"
+    },
+    {
+      "id": 27,
+      "matchNumber": 27,
+      "group": "E",
+      "team1": "Mali",
+      "team2": "France",
+      "date": "2026-07-07",
+      "stadium": "BC Place",
+      "city": "Vancouver"
+    },
+    {
+      "id": 28,
+      "matchNumber": 28,
+      "group": "E",
+      "team1": "Paraguay",
+      "team2": "Italy",
+      "date": "2026-07-08",
+      "stadium": "Estadio Guadalajara",
+      "city": "Guadalajara"
+    },
+    {
+      "id": 29,
+      "matchNumber": 29,
+      "group": "E",
+      "team1": "Paraguay",
+      "team2": "France",
+      "date": "2026-07-09",
+      "stadium": "Philadelphia Stadium",
+      "city": "Philadelphia"
+    },
+    {
+      "id": 30,
+      "matchNumber": 30,
+      "group": "E",
+      "team1": "Italy",
+      "team2": "France",
+      "date": "2026-07-10",
+      "stadium": "Boston Stadium",
+      "city": "Boston"
+    },
+    {
+      "id": 31,
+      "matchNumber": 31,
+      "group": "F",
+      "team1": "Iran",
+      "team2": "Croatia",
+      "date": "2026-07-11",
+      "stadium": "SF Bay Area Stadium",
+      "city": "San Francisco"
+    },
+    {
+      "id": 32,
+      "matchNumber": 32,
+      "group": "F",
+      "team1": "Iran",
+      "team2": "Wales",
+      "date": "2026-07-12",
+      "stadium": "Seattle Stadium",
+      "city": "Seattle"
+    },
+    {
+      "id": 33,
+      "matchNumber": 33,
+      "group": "F",
+      "team1": "Iran",
+      "team2": "Colombia",
+      "date": "2026-07-13",
+      "stadium": "Toronto Stadium",
+      "city": "Toronto"
+    },
+    {
+      "id": 34,
+      "matchNumber": 34,
+      "group": "F",
+      "team1": "Croatia",
+      "team2": "Wales",
+      "date": "2026-07-14",
+      "stadium": "Kansas City Stadium",
+      "city": "Kansas City"
+    },
+    {
+      "id": 35,
+      "matchNumber": 35,
+      "group": "F",
+      "team1": "Croatia",
+      "team2": "Colombia",
+      "date": "2026-07-15",
+      "stadium": "Houston Stadium",
+      "city": "Houston"
+    },
+    {
+      "id": 36,
+      "matchNumber": 36,
+      "group": "F",
+      "team1": "Wales",
+      "team2": "Colombia",
+      "date": "2026-07-16",
+      "stadium": "Estadio Monterrey",
+      "city": "Monterrey"
+    },
+    {
+      "id": 37,
+      "matchNumber": 37,
+      "group": "G",
+      "team1": "Poland",
+      "team2": "Brazil",
+      "date": "2026-07-17",
+      "stadium": "Miami Stadium",
+      "city": "Miami"
+    },
+    {
+      "id": 38,
+      "matchNumber": 38,
+      "group": "G",
+      "team1": "Poland",
+      "team2": "Cameroon",
+      "date": "2026-07-18",
+      "stadium": "Atlanta Stadium",
+      "city": "Atlanta"
+    },
+    {
+      "id": 39,
+      "matchNumber": 39,
+      "group": "G",
+      "team1": "Poland",
+      "team2": "Algeria",
+      "date": "2026-07-19",
+      "stadium": "Los Angeles Stadium",
+      "city": "Los Angeles"
+    },
+    {
+      "id": 40,
+      "matchNumber": 40,
+      "group": "G",
+      "team1": "Brazil",
+      "team2": "Cameroon",
+      "date": "2026-07-20",
+      "stadium": "BC Place",
+      "city": "Vancouver"
+    },
+    {
+      "id": 41,
+      "matchNumber": 41,
+      "group": "G",
+      "team1": "Brazil",
+      "team2": "Algeria",
+      "date": "2026-07-21",
+      "stadium": "New York New Jersey Stadium",
+      "city": "New York"
+    },
+    {
+      "id": 42,
+      "matchNumber": 42,
+      "group": "G",
+      "team1": "Cameroon",
+      "team2": "Algeria",
+      "date": "2026-07-22",
+      "stadium": "Philadelphia Stadium",
+      "city": "Philadelphia"
+    },
+    {
+      "id": 43,
+      "matchNumber": 43,
+      "group": "H",
+      "team1": "Ecuador",
+      "team2": "Portugal",
+      "date": "2026-07-23",
+      "stadium": "Dallas Stadium",
+      "city": "Dallas"
+    },
+    {
+      "id": 44,
+      "matchNumber": 44,
+      "group": "H",
+      "team1": "Ecuador",
+      "team2": "Sweden",
+      "date": "2026-07-24",
+      "stadium": "SF Bay Area Stadium",
+      "city": "San Francisco"
+    },
+    {
+      "id": 45,
+      "matchNumber": 45,
+      "group": "H",
+      "team1": "Ecuador",
+      "team2": "Slovenia",
+      "date": "2026-07-25",
+      "stadium": "Boston Stadium",
+      "city": "Boston"
+    },
+    {
+      "id": 46,
+      "matchNumber": 46,
+      "group": "H",
+      "team1": "Portugal",
+      "team2": "Sweden",
+      "date": "2026-07-26",
+      "stadium": "Toronto Stadium",
+      "city": "Toronto"
+    },
+    {
+      "id": 47,
+      "matchNumber": 47,
+      "group": "H",
+      "team1": "Portugal",
+      "team2": "Slovenia",
+      "date": "2026-07-27",
+      "stadium": "Houston Stadium",
+      "city": "Houston"
+    },
+    {
+      "id": 48,
+      "matchNumber": 48,
+      "group": "H",
+      "team1": "Sweden",
+      "team2": "Slovenia",
+      "date": "2026-07-28",
+      "stadium": "Estadio Guadalajara",
+      "city": "Guadalajara"
+    },
+    {
+      "id": 49,
+      "matchNumber": 49,
+      "group": "I",
+      "team1": "Tunisia",
+      "team2": "Czech Republic",
+      "date": "2026-07-29",
+      "stadium": "Miami Stadium",
+      "city": "Miami"
+    },
+    {
+      "id": 50,
+      "matchNumber": 50,
+      "group": "I",
+      "team1": "Tunisia",
+      "team2": "England",
+      "date": "2026-07-30",
+      "stadium": "Atlanta Stadium",
+      "city": "Atlanta"
+    },
+    {
+      "id": 51,
+      "matchNumber": 51,
+      "group": "I",
+      "team1": "Tunisia",
+      "team2": "Argentina",
+      "date": "2026-07-31",
+      "stadium": "BC Place",
+      "city": "Vancouver"
+    },
+    {
+      "id": 52,
+      "matchNumber": 52,
+      "group": "I",
+      "team1": "Czech Republic",
+      "team2": "England",
+      "date": "2026-08-01",
+      "stadium": "Seattle Stadium",
+      "city": "Seattle"
+    },
+    {
+      "id": 53,
+      "matchNumber": 53,
+      "group": "I",
+      "team1": "Czech Republic",
+      "team2": "Argentina",
+      "date": "2026-08-02",
+      "stadium": "Estadio Azteca",
+      "city": "Mexico City"
+    },
+    {
+      "id": 54,
+      "matchNumber": 54,
+      "group": "I",
+      "team1": "England",
+      "team2": "Argentina",
+      "date": "2026-08-03",
+      "stadium": "Estadio Monterrey",
+      "city": "Monterrey"
+    },
+    {
+      "id": 55,
+      "matchNumber": 55,
+      "group": "J",
+      "team1": "Ghana",
+      "team2": "Egypt",
+      "date": "2026-08-04",
+      "stadium": "Philadelphia Stadium",
+      "city": "Philadelphia"
+    },
+    {
+      "id": 56,
+      "matchNumber": 56,
+      "group": "J",
+      "team1": "Ghana",
+      "team2": "Peru",
+      "date": "2026-08-05",
+      "stadium": "New York New Jersey Stadium",
+      "city": "New York"
+    },
+    {
+      "id": 57,
+      "matchNumber": 57,
+      "group": "J",
+      "team1": "Egypt",
+      "team2": "Peru",
+      "date": "2026-08-06",
+      "stadium": "Dallas Stadium",
+      "city": "Dallas"
+    },
+    {
+      "id": 58,
+      "matchNumber": 58,
+      "group": "K",
+      "team1": "Hungary",
+      "team2": "Belgium",
+      "date": "2026-08-07",
+      "stadium": "Kansas City Stadium",
+      "city": "Kansas City"
+    },
+    {
+      "id": 59,
+      "matchNumber": 59,
+      "group": "K",
+      "team1": "Hungary",
+      "team2": "Norway",
+      "date": "2026-08-08",
+      "stadium": "Los Angeles Stadium",
+      "city": "Los Angeles"
+    },
+    {
+      "id": 60,
+      "matchNumber": 60,
+      "group": "K",
+      "team1": "Belgium",
+      "team2": "Norway",
+      "date": "2026-08-09",
+      "stadium": "SF Bay Area Stadium",
+      "city": "San Francisco"
+    },
+    {
+      "id": 61,
+      "matchNumber": 61,
+      "group": "L",
+      "team1": "Spain",
+      "team2": "Serbia",
+      "date": "2026-08-10",
+      "stadium": "Boston Stadium",
+      "city": "Boston"
+    },
+    {
+      "id": 62,
+      "matchNumber": 62,
+      "group": "L",
+      "team1": "Spain",
+      "team2": "Saudi Arabia",
+      "date": "2026-08-11",
+      "stadium": "Toronto Stadium",
+      "city": "Toronto"
+    },
+    {
+      "id": 63,
+      "matchNumber": 63,
+      "group": "L",
+      "team1": "Serbia",
+      "team2": "Saudi Arabia",
+      "date": "2026-08-12",
+      "stadium": "Seattle Stadium",
+      "city": "Seattle"
     }
   ],
   "lodgings": [
