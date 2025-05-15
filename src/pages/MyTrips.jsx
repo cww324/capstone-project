@@ -1,17 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import {
   getAllTrips,
   getAllParticipants,
+  getAllUsers,
   updateParticipantApproval,
-} from '../services/dataAccess';
-import { useUser } from '../hooks/useUser';
-import { useNavigate } from 'react-router-dom';
+  deleteTrip,
+} from "../services/dataAccess";
+import { useUser } from "../hooks/useUser";
+import { useNavigate } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
+import Badge from "react-bootstrap/Badge";
+import Alert from "react-bootstrap/Alert";
+import { deleteParticipant } from "../services/dataAccess";
 
 export const MyTrips = () => {
   const { currentUser } = useUser();
   const [createdTrips, setCreatedTrips] = useState([]);
   const [appliedTrips, setAppliedTrips] = useState([]);
   const [allParticipants, setAllParticipants] = useState([]);
+  const [allUsers, setAllUsers] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,12 +31,14 @@ export const MyTrips = () => {
 
     const loadData = async () => {
       try {
-        const [trips, participants] = await Promise.all([
+        const [trips, participants, users] = await Promise.all([
           getAllTrips(),
           getAllParticipants(),
+          getAllUsers(),
         ]);
 
         setAllParticipants(participants);
+        setAllUsers(users);
 
         const tripsICreated = trips.filter(
           (trip) => trip.userId === currentUser.id
@@ -45,13 +59,14 @@ export const MyTrips = () => {
           );
           return {
             ...trip,
-            status: myEntry?.approved ? 'approved' : 'pending',
+            status: myEntry?.approved ? "approved" : "pending",
+            user: users.find((u) => u.id === trip.userId),
           };
         });
 
         setAppliedTrips(appliedWithStatus);
       } catch (error) {
-        console.error('🔥 Error loading MyTrips:', error);
+        console.error("🔥 Error loading MyTrips:", error);
       }
     };
 
@@ -68,103 +83,139 @@ export const MyTrips = () => {
     navigate(`/edit-trip/${tripId}`);
   };
 
+  const handleDeleteTrip = (tripId) => {
+    if (window.confirm("Are you sure you want to delete this trip?")) {
+      deleteTrip(tripId).then(() => {
+        setCreatedTrips((prev) => prev.filter((trip) => trip.id !== tripId));
+      });
+    }
+  };
+
+  const handleReject = (participantId) => {
+    if (window.confirm("Are you sure you want to reject this participant?")) {
+      deleteParticipant(participantId).then(() => {
+        setAllParticipants((prev) =>
+          prev.filter((p) => p.id !== participantId)
+        );
+      });
+    }
+  };
+
+  const getUsername = (userId) => {
+    const user = allUsers.find((u) => u.id === userId);
+    return user?.name || user?.username || `User ${userId}`;
+  };
+
   return (
-    <div className="container mt-5">
+    <Container className="mt-4">
       <h2 className="mb-4">Trips You Created</h2>
       {createdTrips.length === 0 ? (
-        <p>No trips created yet.</p>
+        <Alert variant="info">You haven't created any trips yet.</Alert>
       ) : (
-        <div className="row">
+        <Row>
           {createdTrips.map((trip) => {
-            const pendingParticipants = allParticipants.filter(
-              (p) => p.tripId === trip.id && p.approved === false
+            const tripParticipants = allParticipants.filter(
+              (p) => p.tripId === trip.id
             );
 
             return (
-              <div className="col-md-6 mb-4" key={trip.id}>
-                <div className="card shadow-sm">
-                  <div className="card-body">
-                    <h5 className="card-title">{trip.name}</h5>
-                    <p className="card-text">{trip.description}</p>
-                    <p className="text-muted">
-                      Organizer:{' '}
-                      <strong>{trip.user?.username || 'Unknown'}</strong>
-                    </p>
-                    <button
-                      className="btn btn-sm btn-primary me-2"
-                      onClick={() => handleEditTrip(trip.id)}
-                    >
-                      Edit Trip
-                    </button>
+              <Col md={6} key={trip.id} className="mb-4">
+                <Card>
+                  <Card.Body>
+                    <Card.Title>{trip.name}</Card.Title>
+                    <Card.Text>{trip.description}</Card.Text>
+                    <Card.Text className="text-muted">
+                      Organizer: <strong>{getUsername(trip.userId)}</strong>
+                    </Card.Text>
+                    <div className="mb-3 d-flex gap-2">
+                      <Button
+                        variant="primary"
+                        size="sm"
+                        onClick={() => handleEditTrip(trip.id)}
+                      >
+                        Edit
+                      </Button>
+                      <Button
+                        variant="outline-danger"
+                        size="sm"
+                        onClick={() => handleDeleteTrip(trip.id)}
+                      >
+                        Delete
+                      </Button>
+                    </div>
 
-                    {pendingParticipants.length > 0 && (
+                    {tripParticipants.length > 0 && (
                       <>
                         <hr />
-                        <p className="fw-bold mb-1">Pending Join Requests:</p>
-                        <ul className="list-group list-group-flush">
-                          {pendingParticipants.map((p) => (
-                            <li
+                        <h6>Participants:</h6>
+                        <ListGroup variant="flush">
+                          {tripParticipants.map((p) => (
+                            <ListGroup.Item
                               key={p.id}
-                              className="list-group-item d-flex justify-content-between align-items-center"
+                              className="d-flex justify-content-between align-items-center"
                             >
-                              User ID: {p.userId}
-                              <div>
-                                <button
-                                  className="btn btn-sm btn-success me-2"
-                                  onClick={() => handleApproval(p.id, true)}
-                                >
-                                  Approve
-                                </button>
-                                <button
-                                  className="btn btn-sm btn-danger"
-                                  onClick={() => handleApproval(p.id, false)}
-                                >
-                                  Reject
-                                </button>
+                              {getUsername(p.userId)}
+                              <div className="d-flex align-items-center gap-2">
+                                <Badge bg={p.approved ? "success" : "warning"}>
+                                  {p.approved ? "Approved" : "Pending"}
+                                </Badge>
+                                {!p.approved && (
+                                  <>
+                                    <Button
+                                      variant="success"
+                                      size="sm"
+                                      onClick={() => handleApproval(p.id, true)}
+                                    >
+                                      Approve
+                                    </Button>
+                                    <Button
+                                      variant="danger"
+                                      size="sm"
+                                      onClick={() => handleReject(p.id)}
+                                    >
+                                      Reject
+                                    </Button>
+                                  </>
+                                )}
                               </div>
-                            </li>
+                            </ListGroup.Item>
                           ))}
-                        </ul>
+                        </ListGroup>
                       </>
                     )}
-                  </div>
-                </div>
-              </div>
+                  </Card.Body>
+                </Card>
+              </Col>
             );
           })}
-        </div>
+        </Row>
       )}
 
       <h2 className="mt-5 mb-4">Trips You Applied To</h2>
       {appliedTrips.length === 0 ? (
-        <p>No applications submitted.</p>
+        <Alert variant="info">You haven't applied to any trips.</Alert>
       ) : (
-        <div className="row">
+        <Row>
           {appliedTrips.map((trip) => (
-            <div className="col-md-6 mb-4" key={trip.id}>
-              <div className="card border-light shadow-sm">
-                <div className="card-body">
-                  <h5 className="card-title">{trip.name}</h5>
-                  <p className="card-text">{trip.description}</p>
-                  <p className="text-muted">
-                    Organizer:{' '}
-                    <strong>{trip.user?.username || 'Unknown'}</strong>
-                  </p>
-                  <span
-                    className={`badge ${
-                      trip.status === 'approved'
-                        ? 'bg-success'
-                        : 'bg-warning text-dark'
-                    }`}
+            <Col md={6} key={trip.id} className="mb-4">
+              <Card border="light">
+                <Card.Body>
+                  <Card.Title>{trip.name}</Card.Title>
+                  <Card.Text>{trip.description}</Card.Text>
+                  <Card.Text className="text-muted">
+                    Organizer: <strong>{getUsername(trip.userId)}</strong>
+                  </Card.Text>
+                  <Badge
+                    bg={trip.status === "approved" ? "success" : "warning"}
                   >
                     {trip.status}
-                  </span>
-                </div>
-              </div>
-            </div>
+                  </Badge>
+                </Card.Body>
+              </Card>
+            </Col>
           ))}
-        </div>
+        </Row>
       )}
-    </div>
+    </Container>
   );
 };

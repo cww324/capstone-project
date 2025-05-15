@@ -1,16 +1,6 @@
 // Put all of your fun fetch calls inside of here:
 
-const API = 'http://localhost:8088';
-
-export const updateParticipantApproval = (participantId, approved) => {
-  return fetch(`http://localhost:8088/participants/${participantId}`, {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ approved }),
-  }).then((res) => res.json());
-};
+const API = "http://localhost:8088";
 
 export const getAllLodgings = () => {
   return fetch(`${API}/lodgings`).then((res) => res.json());
@@ -30,20 +20,23 @@ export const getAllParticipants = () => {
 };
 
 // For posting created Trips to the Database
+export const getAllUsers = () => {
+  return fetch("http://localhost:8088/users").then((res) => res.json());
+};
 
 export const addNewTrip = (tripObj) => {
   return fetch(`${API}/trips`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(tripObj),
   }).then((res) => res.json());
 };
 
 export const requestToJoinTrip = (tripId, userId) => {
   return fetch(`${API}/participants`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       tripId,
@@ -51,4 +44,35 @@ export const requestToJoinTrip = (tripId, userId) => {
       approved: false,
     }),
   }).then((res) => res.json());
+};
+
+export const updateParticipantApproval = (participantId, approved) => {
+  return fetch(`http://localhost:8088/participants/${participantId}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ approved }),
+  }).then((res) => res.json());
+};
+
+export const deleteTrip = (tripId) => {
+  return fetch(`http://localhost:8088/trips/${tripId}`, {
+    method: "DELETE",
+  });
+};
+
+export const updateTrip = (tripId, updatedTrip) => {
+  return fetch(`http://localhost:8088/trips/${tripId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedTrip),
+  }).then((res) => res.json());
+};
+export const deleteParticipant = (participantId) => {
+  return fetch(`http://localhost:8088/participants/${participantId}`, {
+    method: "DELETE",
+  });
 };

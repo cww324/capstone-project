@@ -17,27 +17,15 @@
       "email": "admin@admin.com",
       "password": "admin",
       "id": 3
+    },
+    {
+      "username": "Beth",
+      "email": "Beth@Beth.com",
+      "password": "Beth",
+      "id": 4
     }
   ],
   "trips": [
-    {
-      "id": 1,
-      "name": "Atlanta Group Trip",
-      "organizerId": 2,
-      "matchId": 5,
-      "lodgingId": 3,
-      "userId": 1,
-      "description": "We're all going to see USA vs Mexico and staying nearby!",
-      "createdAt": "2025-05-14T10:00:00Z"
-    },
-    {
-      "name": " TheBambinos",
-      "description": "yo yo yo this is testing",
-      "matchId": 1,
-      "lodgingId": 1,
-      "userId": 1,
-      "id": 3
-    },
     {
       "groupName": "OKaySUUUP",
       "description": "this is a testing group trip I hope it works.",
@@ -48,22 +36,29 @@
       "id": 4
     },
     {
-      "name": "ThisShouldBE an Editable Trip",
-      "description": "let's all see if we can make the edits for this trip work, hopeflly a user can be added/removed and that the trip organizer can then edit the junts",
-      "matchId": 1,
-      "userId": 1,
-      "lodgingId": 32,
-      "createdAt": "2025-05-14T18:51:43.113Z",
-      "id": 5
-    },
-    {
-      "name": "new trip for a new day and a new match",
-      "description": "whoa this is a trip detail form maybe some cool people will join my trip eh?",
+      "name": "I have attempted to edit this trip!!!",
+      "description": "let us see if the edit trip works!\n\nwhoa this is a trip detail form maybe some cool people will join my trip eh?",
       "matchId": 3,
       "lodgingId": 32,
       "userId": 1,
       "createdAt": "2025-05-14T19:09:41.602Z",
-      "id": 6
+      "id": 6,
+      "match": {
+        "id": 3,
+        "matchNumber": 3,
+        "group": "A",
+        "team1": "USA",
+        "team2": "Japan",
+        "date": "2026-06-13",
+        "stadium": "Toronto Stadium",
+        "city": "Toronto"
+      },
+      "user": {
+        "id": 1,
+        "name": "Charlie",
+        "email": "charlie@example.com",
+        "password": "password123"
+      }
     },
     {
       "name": "asdfasdf",
@@ -73,15 +68,6 @@
       "userId": 1,
       "createdAt": "2025-05-14T19:57:09.984Z",
       "id": 7
-    },
-    {
-      "name": "okay testing another new post to see if it is working bruh",
-      "description": "the details ofr this trip include lots of fun, and a new use of hte userId to see if we can't find out who the organizer is for each fucking trip they have created.",
-      "matchId": 1,
-      "lodgingId": 1,
-      "userId": 1,
-      "createdAt": "2025-05-14T19:59:27.292Z",
-      "id": 8
     },
     {
       "id": 9,
@@ -100,6 +86,31 @@
       "userId": 1,
       "createdAt": "2025-05-15T16:15:24.452Z",
       "id": 10
+    },
+    {
+      "name": "This is Beths Trip! yay",
+      "description": "bet made this trip!\n\nyeehaw",
+      "matchId": 2,
+      "lodgingId": 32,
+      "userId": 4,
+      "createdAt": "2025-05-15T19:59:50.922Z",
+      "id": 11,
+      "match": {
+        "id": 2,
+        "matchNumber": 2,
+        "group": "A",
+        "team1": "USA",
+        "team2": "Ivory Coast",
+        "date": "2026-06-12",
+        "stadium": "Estadio Guadalajara",
+        "city": "Guadalajara"
+      },
+      "user": {
+        "username": "Beth",
+        "email": "Beth@Beth.com",
+        "password": "Beth",
+        "id": 4
+      }
     }
   ],
   "matches": [
@@ -780,34 +791,28 @@
   ],
   "participants": [
     {
-      "tripId": 1,
-      "userId": 1,
+      "tripId": 4,
+      "userId": 3,
       "approved": true,
-      "id": 2
+      "id": 6
     },
     {
-      "tripId": 1,
+      "tripId": 10,
       "userId": 1,
-      "approved": true,
-      "id": 3
-    },
-    {
-      "tripId": 1,
-      "userId": 1,
-      "approved": true,
-      "id": 4
-    },
-    {
-      "tripId": 1,
-      "userId": 1,
-      "approved": true,
-      "id": 5
+      "approved": false,
+      "id": 8
     },
     {
       "tripId": 4,
-      "userId": 3,
+      "userId": 1,
       "approved": false,
-      "id": 6
+      "id": 9
+    },
+    {
+      "tripId": 4,
+      "userId": 4,
+      "approved": true,
+      "id": 10
     }
   ]
 }

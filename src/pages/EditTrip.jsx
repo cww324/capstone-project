@@ -1,7 +1,11 @@
-import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { getAllTrips } from '../services/dataAccess';
-import { useUser } from '../hooks/useUser';
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { getAllTrips, updateTrip } from "../services/dataAccess";
+import { useUser } from "../hooks/useUser";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
+import Container from "react-bootstrap/Container";
 
 export const EditTrip = () => {
   const { tripId } = useParams();
@@ -9,79 +13,77 @@ export const EditTrip = () => {
   const { currentUser } = useUser();
 
   const [trip, setTrip] = useState(null);
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [error, setError] = useState('');
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     getAllTrips().then((trips) => {
       const foundTrip = trips.find((t) => t.id === parseInt(tripId));
       if (!foundTrip) {
-        setError('Trip not found');
+        setError("Trip not found");
       } else if (foundTrip.userId !== currentUser.id) {
-        setError('You are not authorized to edit this trip.');
+        setError("You are not authorized to edit this trip.");
       } else {
         setTrip(foundTrip);
         setName(foundTrip.name);
         setDescription(foundTrip.description);
       }
     });
-  }, [tripId, currentUser]);
+  }, []);
 
-  const handleUpdate = () => {
-    fetch(`http://localhost:8088/trips/${trip.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, description }),
-    })
-      .then((res) => res.json())
-      .then(() => {
-        alert('Trip updated successfully!');
-        navigate('/my-trips');
-      });
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    updateTrip(trip.id, { ...trip, name, description }).then(() => {
+      navigate("/my-trips");
+    });
   };
 
-  if (error) return <p className="text-red-600">{error}</p>;
-  if (!trip) return <p>Loading trip...</p>;
+  if (error) {
+    return (
+      <Container className="mt-4">
+        <Alert variant="danger">{error}</Alert>
+      </Container>
+    );
+  }
+
+  if (!trip) {
+    return (
+      <Container className="mt-4">
+        <p>Loading trip...</p>
+      </Container>
+    );
+  }
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Edit Trip</h1>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleUpdate();
-        }}
-        className="flex flex-col gap-3 max-w-lg"
-      >
-        <label>
-          Trip Name:
-          <input
+    <Container className="mt-4">
+      <h2 className="mb-4">Edit Trip</h2>
+      <Form onSubmit={handleUpdate}>
+        <Form.Group className="mb-3" controlId="tripName">
+          <Form.Label>Trip Name</Form.Label>
+          <Form.Control
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border px-2 py-1 rounded"
             required
           />
-        </label>
-        <label>
-          Description:
-          <textarea
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="tripDescription">
+          <Form.Label>Description</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={4}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="w-full border px-2 py-1 rounded"
             required
           />
-        </label>
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-        >
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
           Save Changes
-        </button>
-      </form>
-    </div>
+        </Button>
+      </Form>
+    </Container>
   );
 };

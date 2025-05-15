@@ -1,24 +1,25 @@
-// src/pages/CreateTrip.jsx
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import {
   getAllMatches,
   getAllLodgings,
   addNewTrip,
-} from '../services/dataAccess';
-import { useNavigate } from 'react-router-dom';
+} from "../services/dataAccess";
+import { useNavigate } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 export const CreateTrip = () => {
   const [matches, setMatches] = useState([]);
   const [lodgings, setLodgings] = useState([]);
   const [tripData, setTripData] = useState({
-    name: '',
-    description: '',
-    matchId: '',
-    lodgingId: '',
+    name: "",
+    description: "",
+    matchId: "",
+    lodgingId: "",
   });
 
-  const user = JSON.parse(localStorage.getItem('user')) || {};
-
+  const user = JSON.parse(localStorage.getItem("user")) || {};
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -42,70 +43,76 @@ export const CreateTrip = () => {
       createdAt: new Date().toISOString(),
     };
 
-    addNewTrip(newTrip).then(() => navigate('/trips'));
+    addNewTrip(newTrip).then(() => navigate("/trips"));
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <h2 className="text-xl font-bold mb-4">Create a New Trip</h2>
+    <Container className="mt-4">
+      <h2 className="mb-4">Create a New Trip</h2>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="tripName">
+          <Form.Label>Trip Name</Form.Label>
+          <Form.Control
+            type="text"
+            name="name"
+            value={tripData.name}
+            onChange={handleChange}
+            placeholder="Enter trip name"
+            required
+          />
+        </Form.Group>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="text"
-          name="name"
-          placeholder="Trip Name"
-          value={tripData.name}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          required
-        />
+        <Form.Group className="mb-3" controlId="tripDescription">
+          <Form.Label>Description</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            name="description"
+            value={tripData.description}
+            onChange={handleChange}
+            placeholder="Trip description"
+            required
+          />
+        </Form.Group>
 
-        <textarea
-          name="description"
-          placeholder="Trip Description"
-          value={tripData.description}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          rows="3"
-        />
+        <Form.Group className="mb-3" controlId="matchSelect">
+          <Form.Label>Select Match</Form.Label>
+          <Form.Select
+            name="matchId"
+            value={tripData.matchId}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Choose a match...</option>
+            {matches.map((match) => (
+              <option key={match.id} value={match.id}>
+                {match.team1} vs {match.team2} – {match.city}
+              </option>
+            ))}
+          </Form.Select>
+        </Form.Group>
 
-        <select
-          name="matchId"
-          value={tripData.matchId}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          required
-        >
-          <option value="">Select Match</option>
-          {matches.map((match) => (
-            <option key={match.id} value={match.id}>
-              {match.team1} vs {match.team2} – {match.city}
-            </option>
-          ))}
-        </select>
+        <Form.Group className="mb-4" controlId="lodgingSelect">
+          <Form.Label>Select Lodging</Form.Label>
+          <Form.Select
+            name="lodgingId"
+            value={tripData.lodgingId}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Choose lodging...</option>
+            {lodgings.map((lodging) => (
+              <option key={lodging.id} value={lodging.id}>
+                {lodging.name} – {lodging.city}
+              </option>
+            ))}
+          </Form.Select>
+        </Form.Group>
 
-        <select
-          name="lodgingId"
-          value={tripData.lodgingId}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          required
-        >
-          <option value="">Select Lodging</option>
-          {lodgings.map((lodging) => (
-            <option key={lodging.id} value={lodging.id}>
-              {lodging.name} – {lodging.city}
-            </option>
-          ))}
-        </select>
-
-        <button
-          type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-        >
+        <Button variant="success" type="submit">
           Create Trip
-        </button>
-      </form>
-    </div>
+        </Button>
+      </Form>
+    </Container>
   );
 };
