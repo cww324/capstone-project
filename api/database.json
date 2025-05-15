@@ -11,28 +11,95 @@
       "name": "Alex",
       "email": "alex@example.com",
       "password": "hunter2"
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "admin",
+      "id": 3
     }
   ],
   "trips": [
     {
       "id": 1,
-      "name": "Mexico City Madness",
-      "organizerId": 1,
-      "destination": "Mexico City",
-      "startDate": "2026-06-15",
-      "endDate": "2026-06-25",
-      "matchIds": [1, 2],
-      "lodgingIds": [1, 2]
+      "name": "Atlanta Group Trip",
+      "organizerId": 2,
+      "matchId": 5,
+      "lodgingId": 3,
+      "userId": 1,
+      "description": "We're all going to see USA vs Mexico and staying nearby!",
+      "createdAt": "2025-05-14T10:00:00Z"
     },
     {
-      "id": 2,
-      "name": "Canadian Conquest",
-      "organizerId": 2,
-      "destination": "Toronto",
-      "startDate": "2026-06-18",
-      "endDate": "2026-06-28",
-      "matchIds": [3],
-      "lodgingIds": [3]
+      "name": " TheBambinos",
+      "description": "yo yo yo this is testing",
+      "matchId": 1,
+      "lodgingId": 1,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "groupName": "OKaySUUUP",
+      "description": "this is a testing group trip I hope it works.",
+      "matchId": 6,
+      "lodgingId": 1,
+      "userId": 1,
+      "createAt": "2025-05-14T15:49:01.173Z",
+      "id": 4
+    },
+    {
+      "name": "ThisShouldBE an Editable Trip",
+      "description": "let's all see if we can make the edits for this trip work, hopeflly a user can be added/removed and that the trip organizer can then edit the junts",
+      "matchId": 1,
+      "userId": 1,
+      "lodgingId": 32,
+      "createdAt": "2025-05-14T18:51:43.113Z",
+      "id": 5
+    },
+    {
+      "name": "new trip for a new day and a new match",
+      "description": "whoa this is a trip detail form maybe some cool people will join my trip eh?",
+      "matchId": 3,
+      "lodgingId": 32,
+      "userId": 1,
+      "createdAt": "2025-05-14T19:09:41.602Z",
+      "id": 6
+    },
+    {
+      "name": "asdfasdf",
+      "description": "\ntesting new user id functionality.",
+      "matchId": 3,
+      "lodgingId": 32,
+      "userId": 1,
+      "createdAt": "2025-05-14T19:57:09.984Z",
+      "id": 7
+    },
+    {
+      "name": "okay testing another new post to see if it is working bruh",
+      "description": "the details ofr this trip include lots of fun, and a new use of hte userId to see if we can't find out who the organizer is for each fucking trip they have created.",
+      "matchId": 1,
+      "lodgingId": 1,
+      "userId": 1,
+      "createdAt": "2025-05-14T19:59:27.292Z",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "name": "Testing a Trip",
+      "description": "will this trip show up?",
+      "matchId": 5,
+      "lodgingId": 4,
+      "userId": 1,
+      "createdAt": "2025-05-15T16:07:07.701Z"
+    },
+    {
+      "name": "IM creating a new trip",
+      "description": "this trip will do something i hope???",
+      "matchId": 1,
+      "lodgingId": 1,
+      "userId": 1,
+      "createdAt": "2025-05-15T16:15:24.452Z",
+      "id": 10
     }
   ],
   "matches": [
@@ -670,39 +737,77 @@
   "lodgings": [
     {
       "id": 1,
-      "name": "Qatar Palace Hotel",
-      "location": "Atlanta, Georgia",
-      "price_per_night": 150,
-      "description": "Luxury stay with pool and stadium views.",
-      "image": "/images/soccerhouse1.hpg"
+      "name": "SoccerFan AirBnB",
+      "city": "Atlanta",
+      "pricePerNight": 120,
+      "imageUrl": "/images/lodging1.jpg"
     },
     {
       "id": 2,
-      "name": "Desert Oasis Inn",
-      "location": "Al Wakrah, Qatar",
-      "price_per_night": 80,
-      "description": "Affordable stay close to the beach.",
-      "image": "/images/desert-oasis.jpg"
+      "name": "Resort Somewhere",
+      "city": "Boston",
+      "pricePerNight": 70,
+      "imageUrl": "/images/lodging1.jpg"
     },
     {
-      "id": 3,
-      "name": "Downtown Doha Hostel",
-      "location": "Doha, Qatar",
-      "price_per_night": 40,
-      "description": "Budget-friendly hostel in the heart of the city.",
-      "image": "/images/downtown-hostel.jpg"
+      "id": 32,
+      "name": "Nexus REsort Center",
+      "city": "Toronto",
+      "pricePerNight": 120,
+      "imageUrl": "src/assets/images/boston1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "SoccerFan AirBnB",
+      "city": "Atlanta",
+      "pricePerNight": 120,
+      "imageUrl": "/images/lodging1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "SoccerFan AirBnB",
+      "city": "Atlanta",
+      "pricePerNight": 120,
+      "imageUrl": "/images/lodging1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "SoccerFan AirBnB",
+      "city": "Atlanta",
+      "pricePerNight": 120,
+      "imageUrl": "/images/lodging1.jpg"
     }
   ],
   "participants": [
     {
-      "id": 1,
+      "tripId": 1,
       "userId": 1,
-      "tripId": 1
+      "approved": true,
+      "id": 2
     },
     {
-      "id": 2,
-      "userId": 2,
-      "tripId": 2
+      "tripId": 1,
+      "userId": 1,
+      "approved": true,
+      "id": 3
+    },
+    {
+      "tripId": 1,
+      "userId": 1,
+      "approved": true,
+      "id": 4
+    },
+    {
+      "tripId": 1,
+      "userId": 1,
+      "approved": true,
+      "id": 5
+    },
+    {
+      "tripId": 4,
+      "userId": 3,
+      "approved": false,
+      "id": 6
     }
   ]
 }

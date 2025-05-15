@@ -1,4 +1,3 @@
-// src/auth/Login.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -18,10 +17,9 @@ export const Login = () => {
         );
 
         if (user) {
-          // Save the logged-in user
           localStorage.setItem('user', JSON.stringify(user));
           navigate('/');
-          window.location.reload(); // Force reload to update the navbar
+          window.location.reload(); // Optional: forces Navbar etc. to refresh
         } else {
           alert('Invalid email or password. Please try again.');
         }
@@ -41,12 +39,14 @@ export const Login = () => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <button type="submit">Login</button>
       </form>

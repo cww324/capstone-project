@@ -9,6 +9,8 @@ export const Navbar = () => {
     navigate('/', { replace: true });
   };
 
+  const isLoggedIn = localStorage.getItem('user');
+
   return (
     <ul className="navbar">
       <li className="navbar-item">
@@ -23,10 +25,16 @@ export const Navbar = () => {
       <li className="navbar-item">
         <Link to="/trips">Trips</Link>
       </li>
-      {localStorage.getItem('user') && (
-        <li className="navbar-item navbar-logout">
-          <button onClick={handleLogout}>Logout</button>
-        </li>
+
+      {isLoggedIn && (
+        <>
+          <li className="navbar-item">
+            <Link to="/my-trips">My Trips</Link>
+          </li>
+          <li className="navbar-item navbar-logout">
+            <button onClick={handleLogout}>Logout</button>
+          </li>
+        </>
       )}
     </ul>
   );

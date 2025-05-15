@@ -64,3 +64,8 @@
   color: white;
   cursor: pointer;
 }
+
+body {
+  background-color: #f3f4f6; /* Tailwind's gray-100 */
+  font-family: system-ui, sans-serif;
+}
