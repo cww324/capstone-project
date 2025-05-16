@@ -1,4 +1,8 @@
-// src/pages/CreateTripForMatch.jsx
+// This page is probably old and outdated and NOT USED
+// THIS PAGE IS NOT USED ANYMORE
+// WOOHOOO
+
+
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {

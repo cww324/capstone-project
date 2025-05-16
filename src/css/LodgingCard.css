@@ -1,0 +1,5 @@
+.lodging-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}

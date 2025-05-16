@@ -88,6 +88,15 @@
       "userId": 7,
       "createdAt": "2025-05-16T20:15:55.518Z",
       "id": 3
+    },
+    {
+      "name": "bobobobo",
+      "description": "hi",
+      "matchId": 14,
+      "lodgingId": 1,
+      "userId": 1,
+      "createdAt": "2025-05-16T20:31:45.926Z",
+      "id": 4
     }
   ],
   "matches": [
@@ -1194,14 +1203,26 @@
     {
       "tripId": 1,
       "userId": 7,
-      "status": "pending",
+      "status": "approved",
       "id": 4
     },
     {
       "tripId": 2,
       "userId": 7,
-      "status": "pending",
+      "status": "rejected",
       "id": 5
+    },
+    {
+      "tripId": 4,
+      "userId": 1,
+      "status": "approved",
+      "id": 6
+    },
+    {
+      "tripId": 3,
+      "userId": 1,
+      "status": "pending",
+      "id": 7
     }
   ]
 }
