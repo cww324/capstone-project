@@ -1,37 +1,37 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8088/users')
+    fetch("http://localhost:8088/users")
       .then((res) => res.json())
       .then((users) => {
         if (users.some((user) => user.email === email)) {
-          alert('Email already registered. Please log in instead.');
+          alert("Email already registered. Please log in instead.");
           return;
         }
 
-        const newUser = { username: name, email, password };
+        const newUser = { name, email, password };
 
-        fetch('http://localhost:8088/users', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+        fetch("http://localhost:8088/users", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newUser),
         })
           .then((res) => res.json())
           .then((savedUser) => {
-            alert('Registration successful. Please log in.');
+            alert("Registration successful. Please log in.");
             // optional: auto login
             // localStorage.setItem('user', JSON.stringify(savedUser));
             // navigate('/');
-            navigate('/');
+            navigate("/");
           });
       });
   };

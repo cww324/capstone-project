@@ -1,47 +1,27 @@
-// src/pages/Lodgings.jsx
-import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { getAllLodgings } from '../services/dataAccess.js';
-import { useEffect, useState } from 'react';
-import { LodgingCard } from '../components/LodgingCard.jsx';
+import { useEffect, useState } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { LodgingCard } from "../components/LodgingCard";
 
 export const Lodgings = () => {
   const [lodgings, setLodgings] = useState([]);
 
   useEffect(() => {
-    getAllLodgings().then((lodgings) => {
-      setLodgings(lodgings);
-    });
+    fetch("http://localhost:8088/lodgings") // or whatever your JSON Server port is
+      .then((res) => res.json())
+      .then((data) => setLodgings(data));
   }, []);
+
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold mb-4">Lodging Options</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <Container className="mt-4">
+      <Row>
         {lodgings.map((lodging) => (
-          <LodgingCard key={lodging.id} lodging={lodging} />
+          <Col key={lodging.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
+            <LodgingCard lodging={lodging} />
+          </Col>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 };
-//   return (
-//     <Container className="mt-4">
-//       {lodgings.map((lodging) => (
-//         <Card
-//           key={lodging.id}
-//           className="mb-4"
-//           style={{ maxWidth: '500px', margin: 'auto' }}
-//         >
-//           <Card.Header>{lodging.name}</Card.Header>
-//           <Card.Body>
-//             <Card.Title>{lodging.location}</Card.Title>
-//             <Card.Text>${lodging.price_per_night} per night</Card.Text>
-//             <Button variant="primary">Book Now</Button>
-//           </Card.Body>
-//           <Card.Footer>Available: {lodging.availableDates}</Card.Footer>
-//         </Card>
-//       ))}
-//     </Container>
-//   );
-// };

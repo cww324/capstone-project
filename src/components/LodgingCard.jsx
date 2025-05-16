@@ -1,22 +1,36 @@
 // src/components/LodgingCard.jsx
+import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
+import "../css/LodgingCard.css";
 
 export const LodgingCard = ({ lodging }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/lodgings/${lodging.id}`);
+  };
+
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden border hover:scale-105 transition-transform duration-200 w-full aspect-square flex flex-col">
-      <img
+    <Card
+      className="h-100 shadow-sm lodging-card"
+      onClick={handleClick}
+      style={{ cursor: "pointer" }}
+    >
+      <Card.Img
+        variant="top"
         src={lodging.imageUrl}
         alt={lodging.name}
-        className="w-full h-1/2 object-cover"
+        style={{ height: "180px", objectFit: "cover" }}
       />
-      <div className="p-3 text-sm flex-grow flex flex-col justify-between">
+      <Card.Body className="d-flex flex-column justify-content-between">
         <div>
-          <h2 className="font-semibold text-base truncate">{lodging.name}</h2>
-          <p className="text-gray-600 text-sm">{lodging.city}</p>
+          <Card.Title className="text-truncate">{lodging.name}</Card.Title>
+          <Card.Text className="text-muted">{lodging.city}</Card.Text>
         </div>
-        <p className="text-gray-800 font-bold mt-1">
+        <Card.Text className="fw-bold mt-2">
           ${lodging.pricePerNight}/night
-        </p>
-      </div>
-    </div>
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
 };

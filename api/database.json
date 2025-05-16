@@ -13,104 +13,81 @@
       "password": "hunter2"
     },
     {
-      "username": "admin",
+      "name": "admin",
       "email": "admin@admin.com",
       "password": "admin",
       "id": 3
     },
     {
-      "username": "Beth",
+      "name": "Beth",
       "email": "Beth@Beth.com",
       "password": "Beth",
       "id": 4
+    },
+    {
+      "name": "scotwithonet",
+      "email": "scot@scot.com",
+      "password": "scot",
+      "id": 5
+    },
+    {
+      "name": "soy",
+      "email": "soy@soy.com",
+      "password": "soy",
+      "id": 6
+    },
+    {
+      "name": "Tyler",
+      "email": "Tyler@tyler.com",
+      "password": "tyler",
+      "id": 7
+    },
+    {
+      "name": "Jake",
+      "email": "jake@jake.com",
+      "password": "jake",
+      "id": 8
+    },
+    {
+      "name": "david",
+      "email": "david@david",
+      "password": "david",
+      "id": 9
+    },
+    {
+      "name": "dominic",
+      "email": "dom@dom.com",
+      "password": "dom",
+      "id": 10
     }
   ],
   "trips": [
     {
-      "groupName": "OKaySUUUP",
-      "description": "this is a testing group trip I hope it works.",
-      "matchId": 6,
-      "lodgingId": 1,
+      "name": "trip trip",
+      "description": "trip",
+      "matchId": 18,
+      "lodgingId": 6,
       "userId": 1,
-      "createAt": "2025-05-14T15:49:01.173Z",
-      "id": 4
+      "createdAt": "2025-05-16T20:05:06.885Z",
+      "id": 1
     },
     {
-      "name": "I have attempted to edit this trip!!!",
-      "description": "let us see if the edit trip works!\n\nwhoa this is a trip detail form maybe some cool people will join my trip eh?",
-      "matchId": 3,
-      "lodgingId": 32,
+      "name": "84384848",
+      "description": "7837848",
+      "matchId": 19,
+      "lodgingId": 17,
       "userId": 1,
-      "createdAt": "2025-05-14T19:09:41.602Z",
-      "id": 6,
-      "match": {
-        "id": 3,
-        "matchNumber": 3,
-        "group": "A",
-        "team1": "USA",
-        "team2": "Japan",
-        "date": "2026-06-13",
-        "stadium": "Toronto Stadium",
-        "city": "Toronto"
-      },
-      "user": {
-        "id": 1,
-        "name": "Charlie",
-        "email": "charlie@example.com",
-        "password": "password123"
-      }
+      "createdAt": "2025-05-16T20:05:53.250Z",
+      "id": 2
     },
     {
-      "name": "asdfasdf",
-      "description": "\ntesting new user id functionality.",
-      "matchId": 3,
-      "lodgingId": 32,
-      "userId": 1,
-      "createdAt": "2025-05-14T19:57:09.984Z",
-      "id": 7
-    },
-    {
-      "id": 9,
-      "name": "Testing a Trip",
-      "description": "will this trip show up?",
-      "matchId": 5,
-      "lodgingId": 4,
-      "userId": 1,
-      "createdAt": "2025-05-15T16:07:07.701Z"
-    },
-    {
-      "name": "IM creating a new trip",
-      "description": "this trip will do something i hope???",
-      "matchId": 1,
-      "lodgingId": 1,
-      "userId": 1,
-      "createdAt": "2025-05-15T16:15:24.452Z",
-      "id": 10
-    },
-    {
-      "name": "This is Beths Trip! yay",
-      "description": "bet made this trip!\n\nyeehaw",
+      "name": "Tyler created this tRIP!!!",
+      "description": "trip to party with tyler and the boys!",
       "matchId": 2,
-      "lodgingId": 32,
-      "userId": 4,
-      "createdAt": "2025-05-15T19:59:50.922Z",
-      "id": 11,
-      "match": {
-        "id": 2,
-        "matchNumber": 2,
-        "group": "A",
-        "team1": "USA",
-        "team2": "Ivory Coast",
-        "date": "2026-06-12",
-        "stadium": "Estadio Guadalajara",
-        "city": "Guadalajara"
-      },
-      "user": {
-        "username": "Beth",
-        "email": "Beth@Beth.com",
-        "password": "Beth",
-        "id": 4
-      }
+      "lodgingId": 54,
+      "userId": 7,
+      "createdAt": "2025-05-16T20:15:55.518Z",
+      "id": 3
     }
   ],
   "matches": [
@@ -748,71 +725,483 @@
   "lodgings": [
     {
       "id": 1,
-      "name": "SoccerFan AirBnB",
+      "name": "GoalSide Suite",
       "city": "Atlanta",
-      "pricePerNight": 120,
-      "imageUrl": "/images/lodging1.jpg"
+      "pricePerNight": 239,
+      "imageUrl": "/images/lodging-atlanta-1.jpg"
     },
     {
       "id": 2,
-      "name": "Resort Somewhere",
-      "city": "Boston",
-      "pricePerNight": 70,
-      "imageUrl": "/images/lodging1.jpg"
+      "name": "FanHaus AirBnB",
+      "city": "Atlanta",
+      "pricePerNight": 107,
+      "imageUrl": "/images/lodging-atlanta-2.jpg"
     },
     {
-      "id": 32,
-      "name": "Nexus REsort Center",
-      "city": "Toronto",
-      "pricePerNight": 120,
-      "imageUrl": "src/assets/images/boston1.jpg"
+      "id": 3,
+      "name": "KickBack AirBnB",
+      "city": "Atlanta",
+      "pricePerNight": 107,
+      "imageUrl": "/images/lodging-atlanta-3.jpg"
     },
     {
       "id": 4,
-      "name": "SoccerFan AirBnB",
+      "name": "MatchDay Getaway",
       "city": "Atlanta",
-      "pricePerNight": 120,
-      "imageUrl": "/images/lodging1.jpg"
+      "pricePerNight": 297,
+      "imageUrl": "/images/lodging-atlanta-4.jpg"
     },
     {
       "id": 5,
-      "name": "SoccerFan AirBnB",
-      "city": "Atlanta",
-      "pricePerNight": 120,
-      "imageUrl": "/images/lodging1.jpg"
+      "name": "KickBack Villa",
+      "city": "Boston",
+      "pricePerNight": 186,
+      "imageUrl": "/images/lodging-boston-1.jpg"
     },
     {
       "id": 6,
-      "name": "SoccerFan AirBnB",
-      "city": "Atlanta",
-      "pricePerNight": 120,
-      "imageUrl": "/images/lodging1.jpg"
+      "name": "GoalSide Loft",
+      "city": "Boston",
+      "pricePerNight": 288,
+      "imageUrl": "/images/lodging-boston-2.jpg"
+    },
+    {
+      "id": 7,
+      "name": "KickBack Suite",
+      "city": "Boston",
+      "pricePerNight": 276,
+      "imageUrl": "/images/lodging-boston-3.jpg"
+    },
+    {
+      "id": 8,
+      "name": "ChillZone AirBnB",
+      "city": "Boston",
+      "pricePerNight": 299,
+      "imageUrl": "/images/lodging-boston-4.jpg"
+    },
+    {
+      "id": 9,
+      "name": "ChillZone Getaway",
+      "city": "Dallas",
+      "pricePerNight": 242,
+      "imageUrl": "/images/lodging-dallas-1.jpg"
+    },
+    {
+      "id": 10,
+      "name": "GoalSide Suite",
+      "city": "Dallas",
+      "pricePerNight": 217,
+      "imageUrl": "/images/lodging-dallas-2.jpg"
+    },
+    {
+      "id": 11,
+      "name": "ChillZone Loft",
+      "city": "Dallas",
+      "pricePerNight": 189,
+      "imageUrl": "/images/lodging-dallas-3.jpg"
+    },
+    {
+      "id": 12,
+      "name": "ChillZone Retreat",
+      "city": "Dallas",
+      "pricePerNight": 239,
+      "imageUrl": "/images/lodging-dallas-4.jpg"
+    },
+    {
+      "id": 13,
+      "name": "GoalSide AirBnB",
+      "city": "Houston",
+      "pricePerNight": 296,
+      "imageUrl": "/images/lodging-houston-1.jpg"
+    },
+    {
+      "id": 14,
+      "name": "MatchDay Loft",
+      "city": "Houston",
+      "pricePerNight": 297,
+      "imageUrl": "/images/lodging-houston-2.jpg"
+    },
+    {
+      "id": 15,
+      "name": "FanHaus Suite",
+      "city": "Houston",
+      "pricePerNight": 233,
+      "imageUrl": "/images/lodging-houston-3.jpg"
+    },
+    {
+      "id": 16,
+      "name": "ChillZone Retreat",
+      "city": "Houston",
+      "pricePerNight": 270,
+      "imageUrl": "/images/lodging-houston-4.jpg"
+    },
+    {
+      "id": 17,
+      "name": "ChillZone Retreat",
+      "city": "Kansas City",
+      "pricePerNight": 137,
+      "imageUrl": "/images/lodging-kansas-city-1.jpg"
+    },
+    {
+      "id": 18,
+      "name": "FanHaus Suite",
+      "city": "Kansas City",
+      "pricePerNight": 217,
+      "imageUrl": "/images/lodging-kansas-city-2.jpg"
+    },
+    {
+      "id": 19,
+      "name": "MatchDay Retreat",
+      "city": "Kansas City",
+      "pricePerNight": 232,
+      "imageUrl": "/images/lodging-kansas-city-3.jpg"
+    },
+    {
+      "id": 20,
+      "name": "SoccerFan Suite",
+      "city": "Kansas City",
+      "pricePerNight": 118,
+      "imageUrl": "/images/lodging-kansas-city-4.jpg"
+    },
+    {
+      "id": 21,
+      "name": "SoccerFan Villa",
+      "city": "Los Angeles",
+      "pricePerNight": 126,
+      "imageUrl": "/images/lodging-los-angeles-1.jpg"
+    },
+    {
+      "id": 22,
+      "name": "SoccerFan Retreat",
+      "city": "Los Angeles",
+      "pricePerNight": 81,
+      "imageUrl": "/images/lodging-los-angeles-2.jpg"
+    },
+    {
+      "id": 23,
+      "name": "GoalSide AirBnB",
+      "city": "Los Angeles",
+      "pricePerNight": 271,
+      "imageUrl": "/images/lodging-los-angeles-3.jpg"
+    },
+    {
+      "id": 24,
+      "name": "SoccerFan Retreat",
+      "city": "Los Angeles",
+      "pricePerNight": 99,
+      "imageUrl": "/images/lodging-los-angeles-4.jpg"
+    },
+    {
+      "id": 25,
+      "name": "MatchDay Retreat",
+      "city": "Miami",
+      "pricePerNight": 248,
+      "imageUrl": "/images/lodging-miami-1.jpg"
+    },
+    {
+      "id": 26,
+      "name": "KickBack AirBnB",
+      "city": "Miami",
+      "pricePerNight": 260,
+      "imageUrl": "/images/lodging-miami-2.jpg"
+    },
+    {
+      "id": 27,
+      "name": "FanHaus Loft",
+      "city": "Miami",
+      "pricePerNight": 121,
+      "imageUrl": "/images/lodging-miami-3.jpg"
+    },
+    {
+      "id": 28,
+      "name": "SoccerFan Retreat",
+      "city": "Miami",
+      "pricePerNight": 225,
+      "imageUrl": "/images/lodging-miami-4.jpg"
+    },
+    {
+      "id": 29,
+      "name": "GoalSide Getaway",
+      "city": "New York/New Jersey",
+      "pricePerNight": 157,
+      "imageUrl": "/images/lodging-new-york-new-jersey-1.jpg"
+    },
+    {
+      "id": 30,
+      "name": "ChillZone Villa",
+      "city": "New York/New Jersey",
+      "pricePerNight": 207,
+      "imageUrl": "/images/lodging-new-york-new-jersey-2.jpg"
+    },
+    {
+      "id": 31,
+      "name": "GoalSide Retreat",
+      "city": "New York/New Jersey",
+      "pricePerNight": 81,
+      "imageUrl": "/images/lodging-new-york-new-jersey-3.jpg"
+    },
+    {
+      "id": 32,
+      "name": "KickBack Villa",
+      "city": "New York/New Jersey",
+      "pricePerNight": 143,
+      "imageUrl": "/images/lodging-new-york-new-jersey-4.jpg"
+    },
+    {
+      "id": 33,
+      "name": "ChillZone AirBnB",
+      "city": "Philadelphia",
+      "pricePerNight": 152,
+      "imageUrl": "/images/lodging-philadelphia-1.jpg"
+    },
+    {
+      "id": 34,
+      "name": "ChillZone Getaway",
+      "city": "Philadelphia",
+      "pricePerNight": 178,
+      "imageUrl": "/images/lodging-philadelphia-2.jpg"
+    },
+    {
+      "id": 35,
+      "name": "ChillZone Loft",
+      "city": "Philadelphia",
+      "pricePerNight": 86,
+      "imageUrl": "/images/lodging-philadelphia-3.jpg"
+    },
+    {
+      "id": 36,
+      "name": "KickBack AirBnB",
+      "city": "Philadelphia",
+      "pricePerNight": 233,
+      "imageUrl": "/images/lodging-philadelphia-4.jpg"
+    },
+    {
+      "id": 37,
+      "name": "KickBack Retreat",
+      "city": "San Francisco",
+      "pricePerNight": 289,
+      "imageUrl": "/images/lodging-san-francisco-bay-area-1.jpg"
+    },
+    {
+      "id": 38,
+      "name": "KickBack Suite",
+      "city": "San Francisco",
+      "pricePerNight": 262,
+      "imageUrl": "/images/lodging-san-francisco-bay-area-2.jpg"
+    },
+    {
+      "id": 39,
+      "name": "ChillZone Retreat",
+      "city": "San Francisco",
+      "pricePerNight": 100,
+      "imageUrl": "/images/lodging-san-francisco-bay-area-3.jpg"
+    },
+    {
+      "id": 40,
+      "name": "ChillZone AirBnB",
+      "city": "San Francisco",
+      "pricePerNight": 174,
+      "imageUrl": "/images/lodging-san-francisco-bay-area-4.jpg"
+    },
+    {
+      "id": 41,
+      "name": "GoalSide Loft",
+      "city": "Seattle",
+      "pricePerNight": 283,
+      "imageUrl": "/images/lodging-seattle-1.jpg"
+    },
+    {
+      "id": 42,
+      "name": "FanHaus AirBnB",
+      "city": "Seattle",
+      "pricePerNight": 289,
+      "imageUrl": "/images/lodging-seattle-2.jpg"
+    },
+    {
+      "id": 43,
+      "name": "MatchDay Getaway",
+      "city": "Seattle",
+      "pricePerNight": 198,
+      "imageUrl": "/images/lodging-seattle-3.jpg"
+    },
+    {
+      "id": 44,
+      "name": "FanHaus Getaway",
+      "city": "Seattle",
+      "pricePerNight": 208,
+      "imageUrl": "/images/lodging-seattle-4.jpg"
+    },
+    {
+      "id": 45,
+      "name": "GoalSide Suite",
+      "city": "Toronto",
+      "pricePerNight": 94,
+      "imageUrl": "/images/lodging-toronto-1.jpg"
+    },
+    {
+      "id": 46,
+      "name": "KickBack Retreat",
+      "city": "Toronto",
+      "pricePerNight": 227,
+      "imageUrl": "/images/lodging-toronto-2.jpg"
+    },
+    {
+      "id": 47,
+      "name": "FanHaus Retreat",
+      "city": "Toronto",
+      "pricePerNight": 149,
+      "imageUrl": "/images/lodging-toronto-3.jpg"
+    },
+    {
+      "id": 48,
+      "name": "ChillZone AirBnB",
+      "city": "Toronto",
+      "pricePerNight": 181,
+      "imageUrl": "/images/lodging-toronto-4.jpg"
+    },
+    {
+      "id": 49,
+      "name": "ChillZone Loft",
+      "city": "Vancouver",
+      "pricePerNight": 186,
+      "imageUrl": "/images/lodging-vancouver-1.jpg"
+    },
+    {
+      "id": 50,
+      "name": "MatchDay Loft",
+      "city": "Vancouver",
+      "pricePerNight": 111,
+      "imageUrl": "/images/lodging-vancouver-2.jpg"
+    },
+    {
+      "id": 51,
+      "name": "MatchDay Suite",
+      "city": "Vancouver",
+      "pricePerNight": 278,
+      "imageUrl": "/images/lodging-vancouver-3.jpg"
+    },
+    {
+      "id": 52,
+      "name": "FanHaus Loft",
+      "city": "Vancouver",
+      "pricePerNight": 93,
+      "imageUrl": "/images/lodging-vancouver-4.jpg"
+    },
+    {
+      "id": 53,
+      "name": "FanHaus Suite",
+      "city": "Guadalajara",
+      "pricePerNight": 236,
+      "imageUrl": "/images/lodging-guadalajara-1.jpg"
+    },
+    {
+      "id": 54,
+      "name": "FanHaus Suite",
+      "city": "Guadalajara",
+      "pricePerNight": 150,
+      "imageUrl": "/images/lodging-guadalajara-2.jpg"
+    },
+    {
+      "id": 55,
+      "name": "SoccerFan Loft",
+      "city": "Guadalajara",
+      "pricePerNight": 249,
+      "imageUrl": "/images/lodging-guadalajara-3.jpg"
+    },
+    {
+      "id": 56,
+      "name": "FanHaus Villa",
+      "city": "Guadalajara",
+      "pricePerNight": 165,
+      "imageUrl": "/images/lodging-guadalajara-4.jpg"
+    },
+    {
+      "id": 57,
+      "name": "KickBack Getaway",
+      "city": "Mexico City",
+      "pricePerNight": 112,
+      "imageUrl": "/images/lodging-mexico-city-1.jpg"
+    },
+    {
+      "id": 58,
+      "name": "FanHaus Retreat",
+      "city": "Mexico City",
+      "pricePerNight": 180,
+      "imageUrl": "/images/lodging-mexico-city-2.jpg"
+    },
+    {
+      "id": 59,
+      "name": "KickBack Suite",
+      "city": "Mexico City",
+      "pricePerNight": 143,
+      "imageUrl": "/images/lodging-mexico-city-3.jpg"
+    },
+    {
+      "id": 60,
+      "name": "GoalSide Retreat",
+      "city": "Mexico City",
+      "pricePerNight": 113,
+      "imageUrl": "/images/lodging-mexico-city-4.jpg"
+    },
+    {
+      "id": 61,
+      "name": "KickBack Suite",
+      "city": "Monterrey",
+      "pricePerNight": 267,
+      "imageUrl": "/images/lodging-monterrey-1.jpg"
+    },
+    {
+      "id": 62,
+      "name": "MatchDay Suite",
+      "city": "Monterrey",
+      "pricePerNight": 191,
+      "imageUrl": "/images/lodging-monterrey-2.jpg"
+    },
+    {
+      "id": 63,
+      "name": "ChillZone Retreat",
+      "city": "Monterrey",
+      "pricePerNight": 169,
+      "imageUrl": "/images/lodging-monterrey-3.jpg"
+    },
+    {
+      "id": 64,
+      "name": "MatchDay Suite",
+      "city": "Monterrey",
+      "pricePerNight": 99,
+      "imageUrl": "/images/lodging-monterrey-4.jpg"
     }
   ],
   "participants": [
     {
-      "tripId": 4,
-      "userId": 3,
-      "approved": true,
-      "id": 6
-    },
-    {
-      "tripId": 10,
+      "tripId": 1,
       "userId": 1,
-      "approved": false,
-      "id": 8
+      "status": "approved",
+      "id": 1
     },
     {
-      "tripId": 4,
+      "tripId": 2,
       "userId": 1,
-      "approved": false,
-      "id": 9
+      "status": "approved",
+      "id": 2
     },
     {
-      "tripId": 4,
-      "userId": 4,
-      "approved": true,
-      "id": 10
+      "tripId": 3,
+      "userId": 7,
+      "status": "approved",
+      "id": 3
+    },
+    {
+      "tripId": 1,
+      "userId": 7,
+      "status": "pending",
+      "id": 4
+    },
+    {
+      "tripId": 2,
+      "userId": 7,
+      "status": "pending",
+      "id": 5
     }
   ]
 }

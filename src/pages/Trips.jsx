@@ -1,47 +1,38 @@
-import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { getAllTrips } from '../services/dataAccess.js';
+// src/pages/Trips.jsx
+import { useEffect, useState } from "react";
+import { TripCard } from "../components/TripCard";
+import { useUser } from "../hooks/useUser";
+import Container from "react-bootstrap/Container";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 export const Trips = () => {
+  const { currentUser } = useUser();
   const [trips, setTrips] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    getAllTrips().then(setTrips);
+    fetch("http://localhost:8088/trips?_expand=match&_expand=user")
+      .then((res) => res.json())
+      .then(setTrips);
   }, []);
 
   return (
-    <div className="trips-container">
+    <Container className="mt-4">
       <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>All Group Trips</h2>
-        <Button onClick={() => navigate('/trips/create')} variant="primary">
+        <h2>All Trips</h2>
+        <Button variant="success" onClick={() => navigate("/trips/create")}>
           Create New Trip
         </Button>
       </div>
+
       {trips.length === 0 ? (
-        <p>No trips created yet. Be the first to make one!</p>
+        <p>No trips available yet.</p>
       ) : (
         trips.map((trip) => (
-          <Card key={trip.id} className="mb-3">
-            <Card.Body>
-              <Card.Title>{trip.name}</Card.Title>
-              <Card.Text>
-                Match: {trip.match?.team1} vs {trip.match?.team2}
-                <br />
-                Location: {trip.match?.city} – {trip.match?.stadium}
-                <br />
-                Organized by: {trip.user?.name}
-                <br />
-                {trip.description}
-              </Card.Text>
-              <Button onClick={() => navigate(`/trips/${trip.id}`)}>
-                View Details
-              </Button>
-            </Card.Body>
-          </Card>
+          <TripCard key={trip.id} trip={trip} currentUser={currentUser} />
         ))
       )}
-    </div>
+    </Container>
   );
 };

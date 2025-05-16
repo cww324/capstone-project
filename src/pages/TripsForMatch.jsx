@@ -1,11 +1,16 @@
 // src/pages/TripsForMatch.jsx
-import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {
   getAllTrips,
   getAllLodgings,
   getAllMatches,
-} from '../services/dataAccess';
+} from "../services/dataAccess";
+import { TripCard } from "../components/TripCard";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 export const TripsForMatch = () => {
   const { matchId } = useParams();
@@ -33,55 +38,46 @@ export const TripsForMatch = () => {
 
   const getLodgingName = (lodgingId) => {
     const lodging = lodgings.find((l) => l.id === lodgingId);
-    return lodging ? `${lodging.name} – ${lodging.city}` : 'Loading...';
+    return lodging ? `${lodging.name} – ${lodging.city}` : "Loading...";
   };
 
   return (
-    <div className="p-4">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold">
-          Trips Available for Match:{' '}
+    <Container className="mt-4">
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h2 className="mb-0">
+          Trips for Match:&nbsp;
           {match ? (
             <>
-              <span className="text-blue-700 font-semibold">
+              <span className="text-primary fw-bold">
                 {match.team1} vs {match.team2}
-              </span>{' '}
-              <span className="text-gray-500">
+              </span>{" "}
+              <small className="text-muted">
                 ({match.city} @ {match.stadium})
-              </span>
+              </small>
             </>
           ) : (
             `#${matchId}`
           )}
         </h2>
-
-        <button
-          onClick={() => navigate(`/matches/${matchId}/create`)}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        <Button
+          variant="primary"
+          onClick={() => navigate(`/trips/create?matchId=${matchId}`)}
         >
           Create New Trip
-        </button>
+        </Button>
       </div>
 
       {trips.length === 0 ? (
         <p>No trips found for this match. Be the first to create one!</p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <Row>
           {trips.map((trip) => (
-            <div
-              key={trip.id}
-              className="border p-4 rounded shadow bg-white hover:shadow-lg transition"
-            >
-              <h3 className="font-bold text-lg">{trip.name}</h3>
-              <p className="text-sm text-gray-600 mb-2">{trip.description}</p>
-              <p className="text-sm italic">
-                Lodging: {getLodgingName(trip.lodgingId)}
-              </p>
-              {/* Optional: Add a button to view this trip in detail */}
-            </div>
+            <Col key={trip.id} xs={12} sm={6} md={4} lg={3}>
+              <TripCard trip={trip} />
+            </Col>
           ))}
-        </div>
+        </Row>
       )}
-    </div>
+    </Container>
   );
 };

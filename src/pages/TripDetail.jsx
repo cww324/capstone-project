@@ -1,79 +1,105 @@
 // src/pages/TripDetail.jsx
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import {
-  getAllTrips,
-  getAllLodgings,
-  getAllMatches,
-  requestToJoinTrip,
-} from '../services/dataAccess.js';
-
-import '../css/TripDetail.css';
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useUser } from "../hooks/useUser";
+import { TripParticipants } from "../components/TripParticipants";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 
 export const TripDetail = () => {
   const { tripId } = useParams();
-  const user = JSON.parse(localStorage.getItem('user')) || {};
+  const navigate = useNavigate();
+  const { currentUser } = useUser();
 
   const [trip, setTrip] = useState(null);
-  const [lodging, setLodging] = useState({});
-  const [match, setMatch] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [hasJoined, setHasJoined] = useState(false);
 
   useEffect(() => {
-    getAllTrips().then((trips) => {
-      const foundTrip = trips.find((t) => t.id === parseInt(tripId));
-      setTrip(foundTrip || null);
-      setLoading(false);
-    });
-  }, [tripId]);
+    fetch(`http://localhost:8088/trips/${tripId}?_expand=match&_expand=user`)
+      .then((res) => res.json())
+      .then(setTrip);
 
-  useEffect(() => {
-    if (trip) {
-      getAllLodgings().then((lodgings) => {
-        const selected = lodgings.find((l) => l.id === trip.lodgingId);
-        if (selected) setLodging(selected);
+    fetch(
+      `http://localhost:8088/participants?tripId=${tripId}&userId=${currentUser.id}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.length > 0) setHasJoined(true);
       });
+  }, [tripId, currentUser.id]);
 
-      getAllMatches().then((matches) => {
-        const selected = matches.find((m) => m.id === trip.matchId);
-        if (selected) setMatch(selected);
-      });
-    }
-  }, [trip]);
+  const handleJoinTrip = () => {
+    fetch("http://localhost:8088/participants", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        tripId: parseInt(tripId),
+        userId: currentUser.id,
+        status: "pending",
+      }),
+    }).then(() => setHasJoined(true));
+  };
 
-  if (loading) return <p className="p-4">Loading trip...</p>;
-  if (!trip) return <p className="p-4 text-red-600">Trip not found.</p>;
+  if (!trip) {
+    return <Container className="mt-4">Loading trip details...</Container>;
+  }
 
-  const isOwner = trip.organizerId === user.id;
+  const isOrganizer = trip.userId === currentUser.id;
 
   return (
-    <div className="trip-detail-container">
-      <h2>{trip.name}</h2>
-      <p>{trip.description}</p>
-      <p>
-        <strong>Match:</strong> {match.team1} vs {match.team2} ({match.city})
-      </p>
-      <p>
-        <strong>Lodging:</strong> {lodging.name} – {lodging.city}
-      </p>
+    <Container className="mt-4">
+      <Card>
+        <Card.Body>
+          <div className="position-relative">
+            <Button
+              variant="outline-secondary"
+              size="sm"
+              className="position-absolute top-0 end-0 m-2"
+              onClick={() => navigate(`/edit-trip/${trip.id}`)}
+            >
+              ✏️ Edit
+            </Button>
 
-      {isOwner ? (
-        <div>
-          <button className="edit-button">Edit Trip</button>
-          <button className="manage-button">Manage Join Requests</button>
-        </div>
-      ) : (
-        <button
-          onClick={() => {
-            requestToJoinTrip(trip.id, user.id)
-              .then(() => alert('Request sent!'))
-              .catch((err) => console.error('Failed to join trip', err));
-          }}
-          className="join-button"
-        >
-          Join Trip
-        </button>
-      )}
-    </div>
+            <div>
+              <Card.Title>{trip.name}</Card.Title>
+              <Card.Subtitle className="mb-3 text-muted">
+                Organized by: {trip.user?.name}
+              </Card.Subtitle>
+            </div>
+          </div>
+
+          <Card.Text>{trip.description}</Card.Text>
+
+          <hr />
+
+          <h5>Match Info</h5>
+          <p>
+            {trip.match?.team1} vs {trip.match?.team2}
+            <br />
+            {trip.match?.date} @ {trip.match?.stadium}, {trip.match?.city}
+          </p>
+
+          <div className="mt-4">
+            {isOrganizer ? (
+              <p className="text-success">You organized this trip.</p>
+            ) : hasJoined ? (
+              <p className="text-info">You’ve already joined this trip.</p>
+            ) : (
+              <Button variant="primary" onClick={handleJoinTrip}>
+                Join Trip
+              </Button>
+            )}
+          </div>
+        </Card.Body>
+      </Card>
+
+      <TripParticipants
+        tripId={trip.id}
+        organizerId={trip.userId}
+        currentUserId={currentUser.id}
+        canEdit={isOrganizer}
+      />
+    </Container>
   );
 };
