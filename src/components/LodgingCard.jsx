@@ -1,9 +1,9 @@
 // src/components/LodgingCard.jsx
-import Card from "react-bootstrap/Card";
-import { useNavigate } from "react-router-dom";
-import "../css/LodgingCard.css";
+import Card from 'react-bootstrap/Card';
+import { useNavigate } from 'react-router-dom';
+import '../css/LodgingCard.css';
 
-export const LodgingCard = ({ lodging }) => {
+export const LodgingCard = ({ lodging, thumbnailImageUrl }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -14,13 +14,13 @@ export const LodgingCard = ({ lodging }) => {
     <Card
       className="h-100 shadow-sm lodging-card"
       onClick={handleClick}
-      style={{ cursor: "pointer" }}
+      style={{ cursor: 'pointer' }}
     >
       <Card.Img
         variant="top"
-        src={lodging.imageUrl}
+        src={thumbnailImageUrl}
         alt={lodging.name}
-        style={{ height: "180px", objectFit: "cover" }}
+        style={{ height: '180px', objectFit: 'cover' }}
       />
       <Card.Body className="d-flex flex-column justify-content-between">
         <div>

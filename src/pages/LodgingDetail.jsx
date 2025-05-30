@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Carousel from 'react-bootstrap/Carousel';
 
 export const LodgingDetail = () => {
   const { lodgingId } = useParams();
@@ -13,6 +14,7 @@ export const LodgingDetail = () => {
   const [lodging, setLodging] = useState(null);
   const [matches, setMatches] = useState([]);
   const [trips, setTrips] = useState([]);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     // Get lodging details
@@ -29,6 +31,11 @@ export const LodgingDetail = () => {
     fetch(`http://localhost:8088/trips`)
       .then((res) => res.json())
       .then(setTrips);
+
+    // Get all images for this lodging
+    fetch(`http://localhost:8088/lodgingImages?lodgingId=${lodgingId}`)
+      .then((res) => res.json())
+      .then(setImages);
   }, [lodgingId]);
 
   if (!lodging) return <div className="p-4">Loading lodging...</div>;
@@ -46,12 +53,24 @@ export const LodgingDetail = () => {
   return (
     <Container className="mt-4">
       <Card className="mb-4 shadow-sm">
-        <Card.Img
-          variant="top"
-          src={lodging.imageUrl}
-          alt={lodging.name}
-          style={{ height: "250px", objectFit: "cover" }}
-        />
+        {images.length > 0 && (
+          <Carousel style={{ maxHeight: '600px', overflow: 'hidden' }}>
+            {images.map((img) => (
+              <Carousel.Item key={img.id}>
+                <img
+                  className="d-block w-100"
+                  src={img.url}
+                  alt={`Lodging image ${img.id}`}
+                  style={{
+                    height: '600px',
+                    objectFit: 'cover',
+                    borderRadius: '10px',
+                  }}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        )}
         <Card.Body>
           <Card.Title>{lodging.name}</Card.Title>
           <Card.Text>
@@ -75,11 +94,11 @@ export const LodgingDetail = () => {
                     Match #{match.matchNumber}: {match.team1} vs {match.team2}
                   </Card.Title>
                   <Card.Text>
-                    {match.stadium} —{" "}
+                    {match.stadium} —{' '}
                     {new Date(match.date).toLocaleDateString()}
                   </Card.Text>
                   <Button
-                    variant={alreadyBooked ? "secondary" : "primary"}
+                    variant={alreadyBooked ? 'secondary' : 'primary'}
                     disabled={alreadyBooked}
                     onClick={() =>
                       navigate(
@@ -87,7 +106,7 @@ export const LodgingDetail = () => {
                       )
                     }
                   >
-                    {alreadyBooked ? "Booked" : "Create Trip with This Lodging"}
+                    {alreadyBooked ? 'Booked' : 'Create Trip with This Lodging'}
                   </Button>
                 </Card.Body>
               </Card>
