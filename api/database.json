@@ -754,449 +754,1347 @@
       "id": 1,
       "name": "GoalSide Suite",
       "city": "Atlanta",
-      "pricePerNight": 239,
-      "imageUrl": "/images/lodging-atlanta-1.jpg"
+      "pricePerNight": 239
     },
     {
       "id": 2,
       "name": "FanHaus AirBnB",
       "city": "Atlanta",
-      "pricePerNight": 107,
-      "imageUrl": "/images/lodging-atlanta-2.jpg"
+      "pricePerNight": 107
     },
     {
       "id": 3,
       "name": "KickBack AirBnB",
       "city": "Atlanta",
-      "pricePerNight": 107,
-      "imageUrl": "/images/lodging-atlanta-3.jpg"
+      "pricePerNight": 107
     },
     {
       "id": 4,
       "name": "MatchDay Getaway",
       "city": "Atlanta",
-      "pricePerNight": 297,
-      "imageUrl": "/images/lodging-atlanta-4.jpg"
+      "pricePerNight": 297
     },
     {
       "id": 5,
       "name": "KickBack Villa",
       "city": "Boston",
-      "pricePerNight": 186,
-      "imageUrl": "/images/lodging-boston-1.jpg"
+      "pricePerNight": 186
     },
     {
       "id": 6,
       "name": "GoalSide Loft",
       "city": "Boston",
-      "pricePerNight": 288,
-      "imageUrl": "/images/lodging-boston-2.jpg"
+      "pricePerNight": 288
     },
     {
       "id": 7,
       "name": "KickBack Suite",
       "city": "Boston",
-      "pricePerNight": 276,
-      "imageUrl": "/images/lodging-boston-3.jpg"
+      "pricePerNight": 276
     },
     {
       "id": 8,
       "name": "ChillZone AirBnB",
       "city": "Boston",
-      "pricePerNight": 299,
-      "imageUrl": "/images/lodging-boston-4.jpg"
+      "pricePerNight": 299
     },
     {
       "id": 9,
       "name": "ChillZone Getaway",
       "city": "Dallas",
-      "pricePerNight": 242,
-      "imageUrl": "/images/lodging-dallas-1.jpg"
+      "pricePerNight": 242
     },
     {
       "id": 10,
       "name": "GoalSide Suite",
       "city": "Dallas",
-      "pricePerNight": 217,
-      "imageUrl": "/images/lodging-dallas-2.jpg"
+      "pricePerNight": 217
     },
     {
       "id": 11,
       "name": "ChillZone Loft",
       "city": "Dallas",
-      "pricePerNight": 189,
-      "imageUrl": "/images/lodging-dallas-3.jpg"
+      "pricePerNight": 189
     },
     {
       "id": 12,
       "name": "ChillZone Retreat",
       "city": "Dallas",
-      "pricePerNight": 239,
-      "imageUrl": "/images/lodging-dallas-4.jpg"
+      "pricePerNight": 239
     },
     {
       "id": 13,
       "name": "GoalSide AirBnB",
       "city": "Houston",
-      "pricePerNight": 296,
-      "imageUrl": "/images/lodging-houston-1.jpg"
+      "pricePerNight": 296
     },
     {
       "id": 14,
       "name": "MatchDay Loft",
       "city": "Houston",
-      "pricePerNight": 297,
-      "imageUrl": "/images/lodging-houston-2.jpg"
+      "pricePerNight": 297
     },
     {
       "id": 15,
       "name": "FanHaus Suite",
       "city": "Houston",
-      "pricePerNight": 233,
-      "imageUrl": "/images/lodging-houston-3.jpg"
+      "pricePerNight": 233
     },
     {
       "id": 16,
       "name": "ChillZone Retreat",
       "city": "Houston",
-      "pricePerNight": 270,
-      "imageUrl": "/images/lodging-houston-4.jpg"
+      "pricePerNight": 270
     },
     {
       "id": 17,
       "name": "ChillZone Retreat",
       "city": "Kansas City",
-      "pricePerNight": 137,
-      "imageUrl": "/images/lodging-kansas-city-1.jpg"
+      "pricePerNight": 137
     },
     {
       "id": 18,
       "name": "FanHaus Suite",
       "city": "Kansas City",
-      "pricePerNight": 217,
-      "imageUrl": "/images/lodging-kansas-city-2.jpg"
+      "pricePerNight": 217
     },
     {
       "id": 19,
       "name": "MatchDay Retreat",
       "city": "Kansas City",
-      "pricePerNight": 232,
-      "imageUrl": "/images/lodging-kansas-city-3.jpg"
+      "pricePerNight": 232
     },
     {
       "id": 20,
       "name": "SoccerFan Suite",
       "city": "Kansas City",
-      "pricePerNight": 118,
-      "imageUrl": "/images/lodging-kansas-city-4.jpg"
+      "pricePerNight": 118
     },
     {
       "id": 21,
       "name": "SoccerFan Villa",
       "city": "Los Angeles",
-      "pricePerNight": 126,
-      "imageUrl": "/images/lodging-los-angeles-1.jpg"
+      "pricePerNight": 126
     },
     {
       "id": 22,
       "name": "SoccerFan Retreat",
       "city": "Los Angeles",
-      "pricePerNight": 81,
-      "imageUrl": "/images/lodging-los-angeles-2.jpg"
+      "pricePerNight": 81
     },
     {
       "id": 23,
       "name": "GoalSide AirBnB",
       "city": "Los Angeles",
-      "pricePerNight": 271,
-      "imageUrl": "/images/lodging-los-angeles-3.jpg"
+      "pricePerNight": 271
     },
     {
       "id": 24,
       "name": "SoccerFan Retreat",
       "city": "Los Angeles",
-      "pricePerNight": 99,
-      "imageUrl": "/images/lodging-los-angeles-4.jpg"
+      "pricePerNight": 99
     },
     {
       "id": 25,
       "name": "MatchDay Retreat",
       "city": "Miami",
-      "pricePerNight": 248,
-      "imageUrl": "/images/lodging-miami-1.jpg"
+      "pricePerNight": 248
     },
     {
       "id": 26,
       "name": "KickBack AirBnB",
       "city": "Miami",
-      "pricePerNight": 260,
-      "imageUrl": "/images/lodging-miami-2.jpg"
+      "pricePerNight": 260
     },
     {
       "id": 27,
       "name": "FanHaus Loft",
       "city": "Miami",
-      "pricePerNight": 121,
-      "imageUrl": "/images/lodging-miami-3.jpg"
+      "pricePerNight": 121
     },
     {
       "id": 28,
       "name": "SoccerFan Retreat",
       "city": "Miami",
-      "pricePerNight": 225,
-      "imageUrl": "/images/lodging-miami-4.jpg"
+      "pricePerNight": 225
     },
     {
       "id": 29,
       "name": "GoalSide Getaway",
       "city": "New York/New Jersey",
-      "pricePerNight": 157,
-      "imageUrl": "/images/lodging-new-york-new-jersey-1.jpg"
+      "pricePerNight": 157
     },
     {
       "id": 30,
       "name": "ChillZone Villa",
       "city": "New York/New Jersey",
-      "pricePerNight": 207,
-      "imageUrl": "/images/lodging-new-york-new-jersey-2.jpg"
+      "pricePerNight": 207
     },
     {
       "id": 31,
       "name": "GoalSide Retreat",
       "city": "New York/New Jersey",
-      "pricePerNight": 81,
-      "imageUrl": "/images/lodging-new-york-new-jersey-3.jpg"
+      "pricePerNight": 81
     },
     {
       "id": 32,
       "name": "KickBack Villa",
       "city": "New York/New Jersey",
-      "pricePerNight": 143,
-      "imageUrl": "/images/lodging-new-york-new-jersey-4.jpg"
+      "pricePerNight": 143
     },
     {
       "id": 33,
       "name": "ChillZone AirBnB",
       "city": "Philadelphia",
-      "pricePerNight": 152,
-      "imageUrl": "/images/lodging-philadelphia-1.jpg"
+      "pricePerNight": 152
     },
     {
       "id": 34,
       "name": "ChillZone Getaway",
       "city": "Philadelphia",
-      "pricePerNight": 178,
-      "imageUrl": "/images/lodging-philadelphia-2.jpg"
+      "pricePerNight": 178
     },
     {
       "id": 35,
       "name": "ChillZone Loft",
       "city": "Philadelphia",
-      "pricePerNight": 86,
-      "imageUrl": "/images/lodging-philadelphia-3.jpg"
+      "pricePerNight": 86
     },
     {
       "id": 36,
       "name": "KickBack AirBnB",
       "city": "Philadelphia",
-      "pricePerNight": 233,
-      "imageUrl": "/images/lodging-philadelphia-4.jpg"
+      "pricePerNight": 233
     },
     {
       "id": 37,
       "name": "KickBack Retreat",
       "city": "San Francisco",
-      "pricePerNight": 289,
-      "imageUrl": "/images/lodging-san-francisco-bay-area-1.jpg"
+      "pricePerNight": 289
     },
     {
       "id": 38,
       "name": "KickBack Suite",
       "city": "San Francisco",
-      "pricePerNight": 262,
-      "imageUrl": "/images/lodging-san-francisco-bay-area-2.jpg"
+      "pricePerNight": 262
     },
     {
       "id": 39,
       "name": "ChillZone Retreat",
       "city": "San Francisco",
-      "pricePerNight": 100,
-      "imageUrl": "/images/lodging-san-francisco-bay-area-3.jpg"
+      "pricePerNight": 100
     },
     {
       "id": 40,
       "name": "ChillZone AirBnB",
       "city": "San Francisco",
-      "pricePerNight": 174,
-      "imageUrl": "/images/lodging-san-francisco-bay-area-4.jpg"
+      "pricePerNight": 174
     },
     {
       "id": 41,
       "name": "GoalSide Loft",
       "city": "Seattle",
-      "pricePerNight": 283,
-      "imageUrl": "/images/lodging-seattle-1.jpg"
+      "pricePerNight": 283
     },
     {
       "id": 42,
       "name": "FanHaus AirBnB",
       "city": "Seattle",
-      "pricePerNight": 289,
-      "imageUrl": "/images/lodging-seattle-2.jpg"
+      "pricePerNight": 289
     },
     {
       "id": 43,
       "name": "MatchDay Getaway",
       "city": "Seattle",
-      "pricePerNight": 198,
-      "imageUrl": "/images/lodging-seattle-3.jpg"
+      "pricePerNight": 198
     },
     {
       "id": 44,
       "name": "FanHaus Getaway",
       "city": "Seattle",
-      "pricePerNight": 208,
-      "imageUrl": "/images/lodging-seattle-4.jpg"
+      "pricePerNight": 208
     },
     {
       "id": 45,
       "name": "GoalSide Suite",
       "city": "Toronto",
-      "pricePerNight": 94,
-      "imageUrl": "/images/lodging-toronto-1.jpg"
+      "pricePerNight": 94
     },
     {
       "id": 46,
       "name": "KickBack Retreat",
       "city": "Toronto",
-      "pricePerNight": 227,
-      "imageUrl": "/images/lodging-toronto-2.jpg"
+      "pricePerNight": 227
     },
     {
       "id": 47,
       "name": "FanHaus Retreat",
       "city": "Toronto",
-      "pricePerNight": 149,
-      "imageUrl": "/images/lodging-toronto-3.jpg"
+      "pricePerNight": 149
     },
     {
       "id": 48,
       "name": "ChillZone AirBnB",
       "city": "Toronto",
-      "pricePerNight": 181,
-      "imageUrl": "/images/lodging-toronto-4.jpg"
+      "pricePerNight": 181
     },
     {
       "id": 49,
       "name": "ChillZone Loft",
       "city": "Vancouver",
-      "pricePerNight": 186,
-      "imageUrl": "/images/lodging-vancouver-1.jpg"
+      "pricePerNight": 186
     },
     {
       "id": 50,
       "name": "MatchDay Loft",
       "city": "Vancouver",
-      "pricePerNight": 111,
-      "imageUrl": "/images/lodging-vancouver-2.jpg"
+      "pricePerNight": 111
     },
     {
       "id": 51,
       "name": "MatchDay Suite",
       "city": "Vancouver",
-      "pricePerNight": 278,
-      "imageUrl": "/images/lodging-vancouver-3.jpg"
+      "pricePerNight": 278
     },
     {
       "id": 52,
       "name": "FanHaus Loft",
       "city": "Vancouver",
-      "pricePerNight": 93,
-      "imageUrl": "/images/lodging-vancouver-4.jpg"
+      "pricePerNight": 93
     },
     {
       "id": 53,
       "name": "FanHaus Suite",
       "city": "Guadalajara",
-      "pricePerNight": 236,
-      "imageUrl": "/images/lodging-guadalajara-1.jpg"
+      "pricePerNight": 236
     },
     {
       "id": 54,
       "name": "FanHaus Suite",
       "city": "Guadalajara",
-      "pricePerNight": 150,
-      "imageUrl": "/images/lodging-guadalajara-2.jpg"
+      "pricePerNight": 150
     },
     {
       "id": 55,
       "name": "SoccerFan Loft",
       "city": "Guadalajara",
-      "pricePerNight": 249,
-      "imageUrl": "/images/lodging-guadalajara-3.jpg"
+      "pricePerNight": 249
     },
     {
       "id": 56,
       "name": "FanHaus Villa",
       "city": "Guadalajara",
-      "pricePerNight": 165,
-      "imageUrl": "/images/lodging-guadalajara-4.jpg"
+      "pricePerNight": 165
     },
     {
       "id": 57,
       "name": "KickBack Getaway",
       "city": "Mexico City",
-      "pricePerNight": 112,
-      "imageUrl": "/images/lodging-mexico-city-1.jpg"
+      "pricePerNight": 112
     },
     {
       "id": 58,
       "name": "FanHaus Retreat",
       "city": "Mexico City",
-      "pricePerNight": 180,
-      "imageUrl": "/images/lodging-mexico-city-2.jpg"
+      "pricePerNight": 180
     },
     {
       "id": 59,
       "name": "KickBack Suite",
       "city": "Mexico City",
-      "pricePerNight": 143,
-      "imageUrl": "/images/lodging-mexico-city-3.jpg"
+      "pricePerNight": 143
     },
     {
       "id": 60,
       "name": "GoalSide Retreat",
       "city": "Mexico City",
-      "pricePerNight": 113,
-      "imageUrl": "/images/lodging-mexico-city-4.jpg"
+      "pricePerNight": 113
     },
     {
       "id": 61,
       "name": "KickBack Suite",
       "city": "Monterrey",
-      "pricePerNight": 267,
-      "imageUrl": "/images/lodging-monterrey-1.jpg"
+      "pricePerNight": 267
     },
     {
       "id": 62,
       "name": "MatchDay Suite",
       "city": "Monterrey",
-      "pricePerNight": 191,
-      "imageUrl": "/images/lodging-monterrey-2.jpg"
+      "pricePerNight": 191
     },
     {
       "id": 63,
       "name": "ChillZone Retreat",
       "city": "Monterrey",
-      "pricePerNight": 169,
-      "imageUrl": "/images/lodging-monterrey-3.jpg"
+      "pricePerNight": 169
     },
     {
       "id": 64,
       "name": "MatchDay Suite",
       "city": "Monterrey",
-      "pricePerNight": 99,
-      "imageUrl": "/images/lodging-monterrey-4.jpg"
+      "pricePerNight": 99
+    }
+  ],
+  "lodgingImages": [
+    {
+      "id": 1,
+      "lodgingId": 1,
+      "url": "/images/atlanta-1a.jpg"
+    },
+    {
+      "id": 2,
+      "lodgingId": 1,
+      "url": "/images/atlanta-1b.jpg"
+    },
+    {
+      "id": 3,
+      "lodgingId": 1,
+      "url": "/images/atlanta-1c.jpg"
+    },
+    {
+      "id": 4,
+      "lodgingId": 2,
+      "url": "/images/atlanta-2a.jpg"
+    },
+    {
+      "id": 5,
+      "lodgingId": 2,
+      "url": "/images/atlanta-2b.jpg"
+    },
+    {
+      "id": 6,
+      "lodgingId": 2,
+      "url": "/images/atlanta-2c.jpg"
+    },
+    {
+      "id": 7,
+      "lodgingId": 3,
+      "url": "/images/atlanta-3a.jpg"
+    },
+    {
+      "id": 8,
+      "lodgingId": 3,
+      "url": "/images/atlanta-3b.jpg"
+    },
+    {
+      "id": 9,
+      "lodgingId": 3,
+      "url": "/images/atlanta-3c.jpg"
+    },
+    {
+      "id": 10,
+      "lodgingId": 4,
+      "url": "/images/atlanta-4a.jpg"
+    },
+    {
+      "id": 11,
+      "lodgingId": 4,
+      "url": "/images/atlanta-4b.jpg"
+    },
+    {
+      "id": 12,
+      "lodgingId": 4,
+      "url": "/images/atlanta-4c.jpg"
+    },
+    {
+      "id": 13,
+      "lodgingId": 5,
+      "url": "/images/boston-5a.jpg"
+    },
+    {
+      "id": 14,
+      "lodgingId": 5,
+      "url": "/images/boston-5b.jpg"
+    },
+    {
+      "id": 15,
+      "lodgingId": 5,
+      "url": "/images/boston-5c.jpg"
+    },
+    {
+      "id": 16,
+      "lodgingId": 6,
+      "url": "/images/boston-6a.jpg"
+    },
+    {
+      "id": 17,
+      "lodgingId": 6,
+      "url": "/images/boston-6b.jpg"
+    },
+    {
+      "id": 18,
+      "lodgingId": 6,
+      "url": "/images/boston-6c.jpg"
+    },
+    {
+      "id": 19,
+      "lodgingId": 7,
+      "url": "/images/boston-7a.jpg"
+    },
+    {
+      "id": 20,
+      "lodgingId": 7,
+      "url": "/images/boston-7b.jpg"
+    },
+    {
+      "id": 21,
+      "lodgingId": 7,
+      "url": "/images/boston-7c.jpg"
+    },
+    {
+      "id": 22,
+      "lodgingId": 8,
+      "url": "/images/boston-8a.jpg"
+    },
+    {
+      "id": 23,
+      "lodgingId": 8,
+      "url": "/images/boston-8b.jpg"
+    },
+    {
+      "id": 24,
+      "lodgingId": 8,
+      "url": "/images/boston-8c.jpg"
+    },
+    {
+      "id": 25,
+      "lodgingId": 9,
+      "url": "/images/dallas-9a.jpg"
+    },
+    {
+      "id": 26,
+      "lodgingId": 9,
+      "url": "/images/dallas-9b.jpg"
+    },
+    {
+      "id": 27,
+      "lodgingId": 9,
+      "url": "/images/dallas-9c.jpg"
+    },
+    {
+      "id": 28,
+      "lodgingId": 10,
+      "url": "/images/dallas-10a.jpg"
+    },
+    {
+      "id": 29,
+      "lodgingId": 10,
+      "url": "/images/dallas-10b.jpg"
+    },
+    {
+      "id": 30,
+      "lodgingId": 10,
+      "url": "/images/dallas-10c.jpg"
+    },
+    {
+      "id": 31,
+      "lodgingId": 11,
+      "url": "/images/dallas-11a.jpg"
+    },
+    {
+      "id": 32,
+      "lodgingId": 11,
+      "url": "/images/dallas-11b.jpg"
+    },
+    {
+      "id": 33,
+      "lodgingId": 11,
+      "url": "/images/dallas-11c.jpg"
+    },
+    {
+      "id": 34,
+      "lodgingId": 12,
+      "url": "/images/dallas-12a.jpg"
+    },
+    {
+      "id": 35,
+      "lodgingId": 12,
+      "url": "/images/dallas-12b.jpg"
+    },
+    {
+      "id": 36,
+      "lodgingId": 12,
+      "url": "/images/dallas-12c.jpg"
+    },
+    {
+      "id": 37,
+      "lodgingId": 13,
+      "url": "/images/houston-13a.jpg"
+    },
+    {
+      "id": 38,
+      "lodgingId": 13,
+      "url": "/images/houston-13b.jpg"
+    },
+    {
+      "id": 39,
+      "lodgingId": 13,
+      "url": "/images/houston-13c.jpg"
+    },
+    {
+      "id": 40,
+      "lodgingId": 14,
+      "url": "/images/houston-14a.jpg"
+    },
+    {
+      "id": 41,
+      "lodgingId": 14,
+      "url": "/images/houston-14b.jpg"
+    },
+    {
+      "id": 42,
+      "lodgingId": 14,
+      "url": "/images/houston-14c.jpg"
+    },
+    {
+      "id": 43,
+      "lodgingId": 15,
+      "url": "/images/houston-15a.jpg"
+    },
+    {
+      "id": 44,
+      "lodgingId": 15,
+      "url": "/images/houston-15b.jpg"
+    },
+    {
+      "id": 45,
+      "lodgingId": 15,
+      "url": "/images/houston-15c.jpg"
+    },
+    {
+      "id": 46,
+      "lodgingId": 16,
+      "url": "/images/houston-16a.jpg"
+    },
+    {
+      "id": 47,
+      "lodgingId": 16,
+      "url": "/images/houston-16b.jpg"
+    },
+    {
+      "id": 48,
+      "lodgingId": 16,
+      "url": "/images/houston-16c.jpg"
+    },
+    {
+      "id": 49,
+      "lodgingId": 17,
+      "url": "/images/kansas-city-17a.jpg"
+    },
+    {
+      "id": 50,
+      "lodgingId": 17,
+      "url": "/images/kansas-city-17b.jpg"
+    },
+    {
+      "id": 51,
+      "lodgingId": 17,
+      "url": "/images/kansas-city-17c.jpg"
+    },
+    {
+      "id": 52,
+      "lodgingId": 18,
+      "url": "/images/kansas-city-18a.jpg"
+    },
+    {
+      "id": 53,
+      "lodgingId": 18,
+      "url": "/images/kansas-city-18b.jpg"
+    },
+    {
+      "id": 54,
+      "lodgingId": 18,
+      "url": "/images/kansas-city-18c.jpg"
+    },
+    {
+      "id": 55,
+      "lodgingId": 19,
+      "url": "/images/kansas-city-19a.jpg"
+    },
+    {
+      "id": 56,
+      "lodgingId": 19,
+      "url": "/images/kansas-city-19b.jpg"
+    },
+    {
+      "id": 57,
+      "lodgingId": 19,
+      "url": "/images/kansas-city-19c.jpg"
+    },
+    {
+      "id": 58,
+      "lodgingId": 20,
+      "url": "/images/kansas-city-20a.jpg"
+    },
+    {
+      "id": 59,
+      "lodgingId": 20,
+      "url": "/images/kansas-city-20b.jpg"
+    },
+    {
+      "id": 60,
+      "lodgingId": 20,
+      "url": "/images/kansas-city-20c.jpg"
+    },
+    {
+      "id": 61,
+      "lodgingId": 21,
+      "url": "/images/los-angeles-21a.jpg"
+    },
+    {
+      "id": 62,
+      "lodgingId": 21,
+      "url": "/images/los-angeles-21b.jpg"
+    },
+    {
+      "id": 63,
+      "lodgingId": 21,
+      "url": "/images/los-angeles-21c.jpg"
+    },
+    {
+      "id": 64,
+      "lodgingId": 22,
+      "url": "/images/los-angeles-22a.jpg"
+    },
+    {
+      "id": 65,
+      "lodgingId": 22,
+      "url": "/images/los-angeles-22b.jpg"
+    },
+    {
+      "id": 66,
+      "lodgingId": 22,
+      "url": "/images/los-angeles-22c.jpg"
+    },
+    {
+      "id": 67,
+      "lodgingId": 23,
+      "url": "/images/los-angeles-23a.jpg"
+    },
+    {
+      "id": 68,
+      "lodgingId": 23,
+      "url": "/images/los-angeles-23b.jpg"
+    },
+    {
+      "id": 69,
+      "lodgingId": 23,
+      "url": "/images/los-angeles-23c.jpg"
+    },
+    {
+      "id": 70,
+      "lodgingId": 24,
+      "url": "/images/los-angeles-24a.jpg"
+    },
+    {
+      "id": 71,
+      "lodgingId": 24,
+      "url": "/images/los-angeles-24b.jpg"
+    },
+    {
+      "id": 72,
+      "lodgingId": 24,
+      "url": "/images/los-angeles-24c.jpg"
+    },
+    {
+      "id": 73,
+      "lodgingId": 25,
+      "url": "/images/miami-25a.jpg"
+    },
+    {
+      "id": 74,
+      "lodgingId": 25,
+      "url": "/images/miami-25b.jpg"
+    },
+    {
+      "id": 75,
+      "lodgingId": 25,
+      "url": "/images/miami-25c.jpg"
+    },
+    {
+      "id": 76,
+      "lodgingId": 26,
+      "url": "/images/miami-26a.jpg"
+    },
+    {
+      "id": 77,
+      "lodgingId": 26,
+      "url": "/images/miami-26b.jpg"
+    },
+    {
+      "id": 78,
+      "lodgingId": 26,
+      "url": "/images/miami-26c.jpg"
+    },
+    {
+      "id": 79,
+      "lodgingId": 27,
+      "url": "/images/miami-27a.jpg"
+    },
+    {
+      "id": 80,
+      "lodgingId": 27,
+      "url": "/images/miami-27b.jpg"
+    },
+    {
+      "id": 81,
+      "lodgingId": 27,
+      "url": "/images/miami-27c.jpg"
+    },
+    {
+      "id": 82,
+      "lodgingId": 28,
+      "url": "/images/miami-28a.jpg"
+    },
+    {
+      "id": 83,
+      "lodgingId": 28,
+      "url": "/images/miami-28b.jpg"
+    },
+    {
+      "id": 84,
+      "lodgingId": 28,
+      "url": "/images/miami-28c.jpg"
+    },
+    {
+      "id": 85,
+      "lodgingId": 29,
+      "url": "/images/new-york-new-jersey-29a.jpg"
+    },
+    {
+      "id": 86,
+      "lodgingId": 29,
+      "url": "/images/new-york-new-jersey-29b.jpg"
+    },
+    {
+      "id": 87,
+      "lodgingId": 29,
+      "url": "/images/new-york-new-jersey-29c.jpg"
+    },
+    {
+      "id": 88,
+      "lodgingId": 30,
+      "url": "/images/new-york-new-jersey-30a.jpg"
+    },
+    {
+      "id": 89,
+      "lodgingId": 30,
+      "url": "/images/new-york-new-jersey-30b.jpg"
+    },
+    {
+      "id": 90,
+      "lodgingId": 30,
+      "url": "/images/new-york-new-jersey-30c.jpg"
+    },
+    {
+      "id": 91,
+      "lodgingId": 31,
+      "url": "/images/new-york-new-jersey-31a.jpg"
+    },
+    {
+      "id": 92,
+      "lodgingId": 31,
+      "url": "/images/new-york-new-jersey-31b.jpg"
+    },
+    {
+      "id": 93,
+      "lodgingId": 31,
+      "url": "/images/new-york-new-jersey-31c.jpg"
+    },
+    {
+      "id": 94,
+      "lodgingId": 32,
+      "url": "/images/new-york-new-jersey-32a.jpg"
+    },
+    {
+      "id": 95,
+      "lodgingId": 32,
+      "url": "/images/new-york-new-jersey-32b.jpg"
+    },
+    {
+      "id": 96,
+      "lodgingId": 32,
+      "url": "/images/new-york-new-jersey-32c.jpg"
+    },
+    {
+      "id": 97,
+      "lodgingId": 33,
+      "url": "/images/philadelphia-33a.jpg"
+    },
+    {
+      "id": 98,
+      "lodgingId": 33,
+      "url": "/images/philadelphia-33b.jpg"
+    },
+    {
+      "id": 99,
+      "lodgingId": 33,
+      "url": "/images/philadelphia-33c.jpg"
+    },
+    {
+      "id": 100,
+      "lodgingId": 34,
+      "url": "/images/philadelphia-34a.jpg"
+    },
+    {
+      "id": 101,
+      "lodgingId": 34,
+      "url": "/images/philadelphia-34b.jpg"
+    },
+    {
+      "id": 102,
+      "lodgingId": 34,
+      "url": "/images/philadelphia-34c.jpg"
+    },
+    {
+      "id": 103,
+      "lodgingId": 35,
+      "url": "/images/philadelphia-35a.jpg"
+    },
+    {
+      "id": 104,
+      "lodgingId": 35,
+      "url": "/images/philadelphia-35b.jpg"
+    },
+    {
+      "id": 105,
+      "lodgingId": 35,
+      "url": "/images/philadelphia-35c.jpg"
+    },
+    {
+      "id": 106,
+      "lodgingId": 36,
+      "url": "/images/philadelphia-36a.jpg"
+    },
+    {
+      "id": 107,
+      "lodgingId": 36,
+      "url": "/images/philadelphia-36b.jpg"
+    },
+    {
+      "id": 108,
+      "lodgingId": 36,
+      "url": "/images/philadelphia-36c.jpg"
+    },
+    {
+      "id": 109,
+      "lodgingId": 37,
+      "url": "/images/san-francisco-37a.jpg"
+    },
+    {
+      "id": 110,
+      "lodgingId": 37,
+      "url": "/images/san-francisco-37b.jpg"
+    },
+    {
+      "id": 111,
+      "lodgingId": 37,
+      "url": "/images/san-francisco-37c.jpg"
+    },
+    {
+      "id": 112,
+      "lodgingId": 38,
+      "url": "/images/san-francisco-38a.jpg"
+    },
+    {
+      "id": 113,
+      "lodgingId": 38,
+      "url": "/images/san-francisco-38b.jpg"
+    },
+    {
+      "id": 114,
+      "lodgingId": 38,
+      "url": "/images/san-francisco-38c.jpg"
+    },
+    {
+      "id": 115,
+      "lodgingId": 39,
+      "url": "/images/san-francisco-39a.jpg"
+    },
+    {
+      "id": 116,
+      "lodgingId": 39,
+      "url": "/images/san-francisco-39b.jpg"
+    },
+    {
+      "id": 117,
+      "lodgingId": 39,
+      "url": "/images/san-francisco-39c.jpg"
+    },
+    {
+      "id": 118,
+      "lodgingId": 40,
+      "url": "/images/san-francisco-40a.jpg"
+    },
+    {
+      "id": 119,
+      "lodgingId": 40,
+      "url": "/images/san-francisco-40b.jpg"
+    },
+    {
+      "id": 120,
+      "lodgingId": 40,
+      "url": "/images/san-francisco-40c.jpg"
+    },
+    {
+      "id": 121,
+      "lodgingId": 41,
+      "url": "/images/seattle-41a.jpg"
+    },
+    {
+      "id": 122,
+      "lodgingId": 41,
+      "url": "/images/seattle-41b.jpg"
+    },
+    {
+      "id": 123,
+      "lodgingId": 41,
+      "url": "/images/seattle-41c.jpg"
+    },
+    {
+      "id": 124,
+      "lodgingId": 42,
+      "url": "/images/seattle-42a.jpg"
+    },
+    {
+      "id": 125,
+      "lodgingId": 42,
+      "url": "/images/seattle-42b.jpg"
+    },
+    {
+      "id": 126,
+      "lodgingId": 42,
+      "url": "/images/seattle-42c.jpg"
+    },
+    {
+      "id": 127,
+      "lodgingId": 43,
+      "url": "/images/seattle-43a.jpg"
+    },
+    {
+      "id": 128,
+      "lodgingId": 43,
+      "url": "/images/seattle-43b.jpg"
+    },
+    {
+      "id": 129,
+      "lodgingId": 43,
+      "url": "/images/seattle-43c.jpg"
+    },
+    {
+      "id": 130,
+      "lodgingId": 44,
+      "url": "/images/seattle-44a.jpg"
+    },
+    {
+      "id": 131,
+      "lodgingId": 44,
+      "url": "/images/seattle-44b.jpg"
+    },
+    {
+      "id": 132,
+      "lodgingId": 44,
+      "url": "/images/seattle-44c.jpg"
+    },
+    {
+      "id": 133,
+      "lodgingId": 45,
+      "url": "/images/toronto-45a.jpg"
+    },
+    {
+      "id": 134,
+      "lodgingId": 45,
+      "url": "/images/toronto-45b.jpg"
+    },
+    {
+      "id": 135,
+      "lodgingId": 45,
+      "url": "/images/toronto-45c.jpg"
+    },
+    {
+      "id": 136,
+      "lodgingId": 46,
+      "url": "/images/toronto-46a.jpg"
+    },
+    {
+      "id": 137,
+      "lodgingId": 46,
+      "url": "/images/toronto-46b.jpg"
+    },
+    {
+      "id": 138,
+      "lodgingId": 46,
+      "url": "/images/toronto-46c.jpg"
+    },
+    {
+      "id": 139,
+      "lodgingId": 47,
+      "url": "/images/toronto-47a.jpg"
+    },
+    {
+      "id": 140,
+      "lodgingId": 47,
+      "url": "/images/toronto-47b.jpg"
+    },
+    {
+      "id": 141,
+      "lodgingId": 47,
+      "url": "/images/toronto-47c.jpg"
+    },
+    {
+      "id": 142,
+      "lodgingId": 48,
+      "url": "/images/toronto-48a.jpg"
+    },
+    {
+      "id": 143,
+      "lodgingId": 48,
+      "url": "/images/toronto-48b.jpg"
+    },
+    {
+      "id": 144,
+      "lodgingId": 48,
+      "url": "/images/toronto-48c.jpg"
+    },
+    {
+      "id": 145,
+      "lodgingId": 49,
+      "url": "/images/vancouver-49a.jpg"
+    },
+    {
+      "id": 146,
+      "lodgingId": 49,
+      "url": "/images/vancouver-49b.jpg"
+    },
+    {
+      "id": 147,
+      "lodgingId": 49,
+      "url": "/images/vancouver-49c.jpg"
+    },
+    {
+      "id": 148,
+      "lodgingId": 50,
+      "url": "/images/vancouver-50a.jpg"
+    },
+    {
+      "id": 149,
+      "lodgingId": 50,
+      "url": "/images/vancouver-50b.jpg"
+    },
+    {
+      "id": 150,
+      "lodgingId": 50,
+      "url": "/images/vancouver-50c.jpg"
+    },
+    {
+      "id": 151,
+      "lodgingId": 51,
+      "url": "/images/vancouver-51a.jpg"
+    },
+    {
+      "id": 152,
+      "lodgingId": 51,
+      "url": "/images/vancouver-51b.jpg"
+    },
+    {
+      "id": 153,
+      "lodgingId": 51,
+      "url": "/images/vancouver-51c.jpg"
+    },
+    {
+      "id": 154,
+      "lodgingId": 52,
+      "url": "/images/vancouver-52a.jpg"
+    },
+    {
+      "id": 155,
+      "lodgingId": 52,
+      "url": "/images/vancouver-52b.jpg"
+    },
+    {
+      "id": 156,
+      "lodgingId": 52,
+      "url": "/images/vancouver-52c.jpg"
+    },
+    {
+      "id": 157,
+      "lodgingId": 53,
+      "url": "/images/guadalajara-53a.jpg"
+    },
+    {
+      "id": 158,
+      "lodgingId": 53,
+      "url": "/images/guadalajara-53b.jpg"
+    },
+    {
+      "id": 159,
+      "lodgingId": 53,
+      "url": "/images/guadalajara-53c.jpg"
+    },
+    {
+      "id": 160,
+      "lodgingId": 54,
+      "url": "/images/guadalajara-54a.jpg"
+    },
+    {
+      "id": 161,
+      "lodgingId": 54,
+      "url": "/images/guadalajara-54b.jpg"
+    },
+    {
+      "id": 162,
+      "lodgingId": 54,
+      "url": "/images/guadalajara-54c.jpg"
+    },
+    {
+      "id": 163,
+      "lodgingId": 55,
+      "url": "/images/guadalajara-55a.jpg"
+    },
+    {
+      "id": 164,
+      "lodgingId": 55,
+      "url": "/images/guadalajara-55b.jpg"
+    },
+    {
+      "id": 165,
+      "lodgingId": 55,
+      "url": "/images/guadalajara-55c.jpg"
+    },
+    {
+      "id": 166,
+      "lodgingId": 56,
+      "url": "/images/guadalajara-56a.jpg"
+    },
+    {
+      "id": 167,
+      "lodgingId": 56,
+      "url": "/images/guadalajara-56b.jpg"
+    },
+    {
+      "id": 168,
+      "lodgingId": 56,
+      "url": "/images/guadalajara-56c.jpg"
+    },
+    {
+      "id": 169,
+      "lodgingId": 57,
+      "url": "/images/mexico-city-57a.jpg"
+    },
+    {
+      "id": 170,
+      "lodgingId": 57,
+      "url": "/images/mexico-city-57b.jpg"
+    },
+    {
+      "id": 171,
+      "lodgingId": 57,
+      "url": "/images/mexico-city-57c.jpg"
+    },
+    {
+      "id": 172,
+      "lodgingId": 58,
+      "url": "/images/mexico-city-58a.jpg"
+    },
+    {
+      "id": 173,
+      "lodgingId": 58,
+      "url": "/images/mexico-city-58b.jpg"
+    },
+    {
+      "id": 174,
+      "lodgingId": 58,
+      "url": "/images/mexico-city-58c.jpg"
+    },
+    {
+      "id": 175,
+      "lodgingId": 59,
+      "url": "/images/mexico-city-59a.jpg"
+    },
+    {
+      "id": 176,
+      "lodgingId": 59,
+      "url": "/images/mexico-city-59b.jpg"
+    },
+    {
+      "id": 177,
+      "lodgingId": 59,
+      "url": "/images/mexico-city-59c.jpg"
+    },
+    {
+      "id": 178,
+      "lodgingId": 60,
+      "url": "/images/mexico-city-60a.jpg"
+    },
+    {
+      "id": 179,
+      "lodgingId": 60,
+      "url": "/images/mexico-city-60b.jpg"
+    },
+    {
+      "id": 180,
+      "lodgingId": 60,
+      "url": "/images/mexico-city-60c.jpg"
+    },
+    {
+      "id": 181,
+      "lodgingId": 61,
+      "url": "/images/monterrey-61a.jpg"
+    },
+    {
+      "id": 182,
+      "lodgingId": 61,
+      "url": "/images/monterrey-61b.jpg"
+    },
+    {
+      "id": 183,
+      "lodgingId": 61,
+      "url": "/images/monterrey-61c.jpg"
+    },
+    {
+      "id": 184,
+      "lodgingId": 62,
+      "url": "/images/monterrey-62a.jpg"
+    },
+    {
+      "id": 185,
+      "lodgingId": 62,
+      "url": "/images/monterrey-62b.jpg"
+    },
+    {
+      "id": 186,
+      "lodgingId": 62,
+      "url": "/images/monterrey-62c.jpg"
+    },
+    {
+      "id": 187,
+      "lodgingId": 63,
+      "url": "/images/monterrey-63a.jpg"
+    },
+    {
+      "id": 188,
+      "lodgingId": 63,
+      "url": "/images/monterrey-63b.jpg"
+    },
+    {
+      "id": 189,
+      "lodgingId": 63,
+      "url": "/images/monterrey-63c.jpg"
+    },
+    {
+      "id": 190,
+      "lodgingId": 64,
+      "url": "/images/monterrey-64a.jpg"
+    },
+    {
+      "id": 191,
+      "lodgingId": 64,
+      "url": "/images/monterrey-64b.jpg"
+    },
+    {
+      "id": 192,
+      "lodgingId": 64,
+      "url": "/images/monterrey-64c.jpg"
     }
   ],
   "participants": [
