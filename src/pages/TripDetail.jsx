@@ -3,9 +3,13 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useUser } from "../hooks/useUser";
 import { TripParticipants } from "../components/TripParticipants";
+import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
+import Stack from "react-bootstrap/Stack";
+import Flag from "react-world-flags";
+import { countryCodes } from "../services/countryCodes";
 
 export const TripDetail = () => {
   const { tripId } = useParams();
@@ -16,7 +20,9 @@ export const TripDetail = () => {
   const [hasJoined, setHasJoined] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:8088/trips/${tripId}?_expand=match&_expand=user`)
+    fetch(
+      `http://localhost:8088/trips/${tripId}?_expand=match&_expand=user&_expand=lodging`
+    )
       .then((res) => res.json())
       .then(setTrip);
 
@@ -47,11 +53,14 @@ export const TripDetail = () => {
 
   const isOrganizer = trip.userId === currentUser.id;
 
+  const getFlagCode = (country) => countryCodes[country] || "UN";
+
   return (
     <Container className="mt-4">
-      <Card>
+      <Card className="shadow-sm">
         <Card.Body>
-          <div className="position-relative">
+          {/* Edit Button */}
+          {isOrganizer && (
             <Button
               variant="outline-secondary"
               size="sm"
@@ -60,31 +69,67 @@ export const TripDetail = () => {
             >
               ✏️ Edit
             </Button>
+          )}
 
-            <div>
-              <Card.Title>{trip.name}</Card.Title>
-              <Card.Subtitle className="mb-3 text-muted">
-                Organized by: {trip.user?.name}
-              </Card.Subtitle>
-            </div>
-          </div>
+          {/* Title & Organizer */}
+          <h3 className="mb-1">{trip.name}</h3>
+          <p className="text-muted mb-3">
+            Organized by <strong>{trip.user?.name}</strong>
+          </p>
 
-          <Card.Text>{trip.description}</Card.Text>
+          {/* Description */}
+          {trip.description && <Card.Text>{trip.description}</Card.Text>}
 
           <hr />
 
-          <h5>Match Info</h5>
-          <p>
-            {trip.match?.team1} vs {trip.match?.team2}
+          {/* Match Info */}
+          <h5 className="mt-3">Match Info</h5>
+          <Stack
+            direction="horizontal"
+            gap={2}
+            className="align-items-center mb-2"
+          >
+            <Flag code={getFlagCode(trip.match?.team1)} style={{ width: 28 }} />
+            <span className="fw-semibold">{trip.match?.team1}</span>
+            <span className="mx-1">vs</span>
+            <Flag code={getFlagCode(trip.match?.team2)} style={{ width: 28 }} />
+            <span className="fw-semibold">{trip.match?.team2}</span>
+          </Stack>
+          <div className="text-muted">
+            {trip.match?.stadium} — {trip.match?.city}
             <br />
-            {trip.match?.date} @ {trip.match?.stadium}, {trip.match?.city}
-          </p>
+            <small>
+              {new Date(trip.match?.date).toLocaleDateString(undefined, {
+                weekday: "short",
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </small>
+          </div>
 
+          {/* Lodging Info */}
+          {trip.lodging && (
+            <>
+              <hr />
+              <h5 className="mt-3">Lodging</h5>
+              <div>
+                <div className="fw-semibold">{trip.lodging.name}</div>
+                <small className="text-muted">
+                  ${trip.lodging.pricePerNight}/night
+                </small>
+              </div>
+            </>
+          )}
+
+          {/* Join Info */}
           <div className="mt-4">
             {isOrganizer ? (
-              <p className="text-success">You organized this trip.</p>
+              <Alert variant="success">You organized this trip.</Alert>
             ) : hasJoined ? (
-              <p className="text-info">You’ve already joined this trip.</p>
+              <Alert variant="info">
+                You’ve already requested to join this trip.
+              </Alert>
             ) : (
               <Button variant="primary" onClick={handleJoinTrip}>
                 Join Trip

@@ -12,9 +12,31 @@ export const Trips = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:8088/trips?_expand=match&_expand=user")
-      .then((res) => res.json())
-      .then(setTrips);
+    Promise.all([
+      fetch(
+        "http://localhost:8088/trips?_expand=match&_expand=user&_expand=lodging"
+      ).then((res) => res.json()),
+      fetch("http://localhost:8088/lodgingImages").then((res) => res.json()),
+    ]).then(([tripsData, lodgingImages]) => {
+      const tripsWithImages = tripsData.map((trip) => {
+        const lodgingId = trip.lodging?.id;
+        const imagesForLodging = lodgingImages.filter(
+          (img) => img.lodgingId === lodgingId
+        );
+        const firstImageUrl =
+          imagesForLodging.length > 0 ? imagesForLodging[0].url : null;
+
+        return {
+          ...trip,
+          lodging: {
+            ...trip.lodging,
+            imageUrl: firstImageUrl,
+          },
+        };
+      });
+
+      setTrips(tripsWithImages);
+    });
   }, []);
 
   return (
